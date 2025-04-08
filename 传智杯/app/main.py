@@ -15,7 +15,6 @@ from openai import OpenAI
 app = Flask(__name__, static_folder="../") 
 CORS(app)  # 允许跨域请求
 
-#留言功能
 comments = []  # 临时存储留言
 
 # 配置 SQLAlchemy 连接 MySQL
