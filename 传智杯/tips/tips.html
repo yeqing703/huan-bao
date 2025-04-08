@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>低碳通</title>
+  <link rel="stylesheet" href="/iconfont/iconfont one/iconfont one/iconfont.css">
+  <link rel="stylesheet" href="tips.css">
+  <!-- 柱状图 -->
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/data.js"></script>
+  <!-- 饼图 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.min.js"></script>
+</head>
+
+<body>
+  <div class="dakuanjia">
+    <!-- 标题 -->
+    <div class="carousel" id="top">
+      <img class="img3" src="/img/screen15.jpg" alt="">
+      <img class="img3" src="/img/screen24.jpg" alt="">
+      <img class="img3" src="/img/screen26.jpg" alt="">
+      <img class="img3" src="/img/screen27.jpg" alt="">
+      <img class="img3" src="/img/screen28.jpg" alt="">
+      <img class="img3" src="/img/screen29.jpg" alt="">
+      <img class="img3" src="/img/screen32.jpg" alt="">
+      <img class="img3" src="/img/screen31.jpg" alt="">
+      <img class="img3" src="/img/screen30.jpg" alt="">
+      <img class="img3" src="/img/screen33.jpg" alt="">
+      <img class="img3" src="/img/screen34.jpg" alt="">
+    </div>
+    <script>
+      const carousel = document.querySelector('.carousel');
+      const images = document.querySelectorAll('.carousel img');
+      let currentIndex = 0;
+
+      function moveSlide() {
+        // Calculate the new position based on the current index
+        const newPosition = -currentIndex * 100;
+        // Move all images to the new position
+        images.forEach(image => {
+          image.style.transform = `translateX(${newPosition}%)`;
+        });
+      }
+
+      function nextSlide() {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+          currentIndex = 0;
+        }
+        moveSlide();
+      }
+
+      // Initial move to show the first three images
+      moveSlide();
+
+      // Set interval to automatically move to the next slide every 3 seconds
+      setInterval(nextSlide, 3000);
+    </script>
+    <!-- 导航 -->
+    <nav class="nav">
+      <div class="n1">
+        <form id="searchForm" action="/homepage/search.html" method="GET" target="_blank">
+          <div class="searchfrom">
+            <div class="seatext"><input type="text" id="searchInput" name="query" placeholder="搜索内容..."></div>
+            <div class="sub"><button type="submit" class="iconfont icon-sousuo"
+                style="font-size: 20px;margin-left: 5px;margin-right: 5px;"></button></div>
+          </div>
+        </form>
+        <a href="/homepage/homepage.html" class="navA" target="_blank">首页</a>
+        <a href="/theory and shouye/theory.html" class="navA" target="_blank">科普</a>
+        <a href="/new/newall.html" class="navA" target="_blank">新闻</a>
+        <a href="/tips/tips.html" class="navA" target="_blank">低碳通</a>
+        <a href="/community/community.html" class="navA" target="_blank">活动</a>
+        <a href="/message/message.html" class="navA" target="_blank">留言</a>
+        <a href="/team/team.html" class="navA" target="_blank">关于我们</a>
+      </div>
+    </nav>
+    <!-- 正文 -->
+    <div class="box_body">
+      <!-- 绿色出行 -->
+      <section id="绿色出行">
+        <div class="box_left">
+          <div class="icon_a">
+            <a href="./detail/greentravel/green.html" style="text-decoration: none;" target="_blank">
+              <div class="box_icon">
+                <img src="./car.png" alt="绿色出行">
+                <strong>
+                  <p>绿色出行</p>
+                </strong>
+              </div>
+            </a>
+          </div>
+          <!-- 排行榜 -->
+          <div class="box_content a1">
+            <div class="content_title1">
+              <h2 style="margin: auto 25px;width: 100%;"><a href="./detail/greentravel/green.html#section1"
+                  style="text-decoration: none;" target="_blank">碳排放排行榜</a></h2>
+            </div>
+            <div class="box_paihanbang">
+
+              <!-- test -->
+              <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+              <!-- <script language="JavaScript">
+              </script> -->
+              <script src="tips.js"></script>
+              <table id="datatable" style="display: none;">
+                <thead>
+                  <tr>
+                    <th>出行方式</th>
+                    <th>碳排放占比 (%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>小汽车</th>
+                    <td>88.44</td>
+                  </tr>
+                  <tr>
+                    <th>地铁</th>
+                    <td>6.49</td>
+                  </tr>
+                  <tr>
+                    <th>公交车</th>
+                    <td>5.06</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+            </div>
+          </div>
+          <!-- 绿色出行方式 -->
+          <div class="box_content a1">
+            <div class="content_title2">
+              <h2 style="margin: auto 25px;width: 100%;"><a href="./detail/greentravel/green.html#section2"
+                  style="text-decoration: none;" target="_blank">出行方式</a></h2>
+            </div>
+            <div class="box_way" id="main">
+              <!-- 饼状图 -->
+              <script src="chart2.js"></script>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 垃圾分类 -->
+      <section id="垃圾分类">
+        <div class="box_right t2">
+          <div class="icon_a">
+            <a href="./detail/rubbish/rubbish.html" style="text-decoration: none;" target="_blank">
+              <div class="box_icon"><img src="./lajifenl.png" alt="垃圾分类">
+                <strong>
+                  <p>垃圾分类</p>
+                </strong>
+              </div>
+            </a>
+          </div>
+          <div class="box_content">
+            <div class="box_small">
+              <strong>
+                <p><a href="./detail/rubbish/rubbish.html#section1" style="text-decoration: none;"
+                    target="_blank">湿垃圾</a></p>
+              </strong>
+              <div class="icon_small">
+                <img src="./detail/rubbish/wet.png" alt="湿垃圾">
+              </div>
+            </div>
+            <div class="box_small">
+              <strong>
+                <p><a href="./detail/rubbish/rubbish.html#section2" style="text-decoration: none;"
+                    target="_blank">干垃圾</a></p>
+              </strong>
+              <div class="icon_small">
+                <img src="./detail/rubbish/ganlaji.png" alt="干垃圾">
+              </div>
+            </div>
+          </div>
+          <div class="box_content">
+            <div class="box_small">
+              <strong>
+                <p><a href="./detail/rubbish/rubbish.html#section3" style="text-decoration: none;"
+                    target="_blank">可回收垃圾</a></p>
+              </strong>
+              <div class="icon_small">
+                <img src="./detail/rubbish/kehuishou.png" alt="可回收垃圾">
+              </div>
+            </div>
+            <div class="box_small">
+              <strong>
+                <p><a href="./detail/rubbish/rubbish.html#section4" style="text-decoration: none;"
+                    target="_blank">有害垃圾</a></p>
+              </strong>
+              <div class="icon_small">
+                <img src="./detail/rubbish/injury.png" alt="有害垃圾">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 废物利用 -->
+      <section id="废物利用">
+        <div class="box_left t3" style="margin-bottom: 100px;">
+          <div class="icon_a">
+            <a href="./detail/salvage/salvage.html" style="text-decoration: none;" target="_blank">
+              <div class="box_icon"><img src="./protection.png" alt="废物利用">
+                <strong>
+                  <p>废物利用</p>
+                </strong>
+              </div>
+            </a>
+          </div>
+          <div class="box_content fw">
+            <!-- <h2 ><a href="#" style="text-decoration: none;" target="_blank">视频</a></h2> -->
+            <div class="video">
+              <h3 style="text-align: center;padding-bottom: 10px;">废纸的利用</h3>
+              <div class="paper">
+                <div class="v001">
+                  <a href="https://www.bilibili.com/video/BV1Ls4y1d72k/?spm_id_from=333.1245.0.0"
+                    style="text-decoration: none;" target="_blank">
+                    <div class="v_image">
+                      <img class="v_img" src="./detail/salvage/salvagepicture/14.png" alt="今天我们来制作一个纸板垃圾桶！">
+                    </div>
+                  </a>
+                  <p class="v_title">
+                    <a href="https://www.bilibili.com/video/BV1Ls4y1d72k/?spm_id_from=333.1245.0.0"
+                      style="text-decoration: none;" target="_blank">今天我们来制作一个纸板垃圾桶！</a>
+                  </p>
+                </div>
+                <div class="v001">
+                  <a href="https://www.bilibili.com/video/BV1eV4y1u73C/?spm_id_from=333.1245.0.0"
+                    style="text-decoration: none;" target="_blank">
+                    <div class="v_image">
+                      <img class="v_img" src="./detail/salvage/salvagepicture/2.png"
+                        alt="变废为宝｜家里的旧纸袋居然有这么多用处～三款旧纸袋改造教程，好用不翻车～">
+                    </div>
+                  </a>
+                  <p class="v_title">
+                    <a href="https://www.bilibili.com/video/BV1eV4y1u73C/?spm_id_from=333.1245.0.0"
+                      style="text-decoration: none;" target="_blank">变废为宝｜家里的旧纸袋居然有这么多用处～三款旧纸袋改造教程，好用不翻车～</a>
+                  </p>
+                </div>
+              </div>
+              <p class="more"><a href="./detail/salvage/salvage.html#section1" style="text-decoration: none;"
+                  target="_blank" class="iconfont icon-arrow-double-right">查看更多</a></p>
+            </div>
+          </div>
+          <div class="box_content fw">
+            <div class="video">
+              <h3 style="text-align: center;padding-bottom: 10px;">废瓶的利用</h3>
+              <div class="bottle">
+                <div class="v001">
+                  <a href="https://www.bilibili.com/video/BV1aT411M75g/?spm_id_from=333.1245.0.0"
+                    style="text-decoration: none;" target="_blank">
+                    <div class="v_image">
+                      <img class="v_img" src="./detail/salvage/salvagepicture/3.png" alt="矿泉水瓶也没有被我放过，努力变成手工博主的第？天">
+                    </div>
+                  </a>
+                  <p class="v_title"><a href="https://www.bilibili.com/video/BV1aT411M75g/?spm_id_from=333.1245.0.0"
+                      style="text-decoration: none;" target="_blank">矿泉水瓶也没有被我放过，努力变成手工博主的第？天</a></p>
+                </div>
+                <div class="v001">
+                  <a href="https://www.bilibili.com/video/BV18T4y1f7Nd/?spm_id_from=333.1245.0.0"
+                    style="text-decoration: none;" target="_blank">
+                    <div class="v_image">
+                      <img class="v_img" src="./detail/salvage/salvagepicture/4.png" alt="塑料瓶改造水母灯">
+                    </div>
+                  </a>
+                  <p class="v_title"><a href="https://www.bilibili.com/video/BV18T4y1f7Nd/?spm_id_from=333.1245.0.0"
+                      style="text-decoration: none;" target="_blank">塑料瓶改造水母灯</a></p>
+                </div>
+              </div>
+              <p class="more"><a href="./detail/salvage/salvage.html#section2" style="text-decoration: none;"
+                  target="_blank" class="iconfont icon-arrow-double-right">查看更多</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 植树 -->
+      <section id="植树">
+        <div class="box_right t4">
+          <div class="icon_a">
+            <a href="./detail/treeplant/plant.html" style="text-decoration: none;" target="_blank">
+              <div class="box_icon"><img src="./fengmtree.png" alt="植树">
+                <strong>
+                  <p>植树</p>
+                </strong>
+              </div>
+            </a>
+          </div>
+          <div class="box_content b1">
+            <h2 style="margin: auto 25px;width: 100%;padding: 30px 10px;">相关报道</h2>
+            <div class="ttt1">
+              <!-- <li>
+                    <a href="https://www.gov.cn/yaowen/liebiao/202404/content_6943360.htm" target="_blank">习近平在参加首都义务植树活动时强调：全民植树增绿 共建美丽中国</a>
+                  </li> -->
+              <li>
+                <a href="http://opinion.people.com.cn/n1/2024/0312/c223228-40194019.html"
+                  target="_blank">人民网评：植树添新绿，共绘美丽中国</a>
+              </li>
+              <li>
+                <a href="http://politics.people.com.cn/n1/2023/0313/c1001-32643629.html"
+                  target="_blank">植树节，跟着总书记一起种下绿色的希望</a>
+              </li>
+              <li>
+                <a href="http://cpc.people.com.cn/n1/2022/0312/c164113-32373296.html" target="_blank">多种树 种好树
+                  习近平厚“植”绿色期望</a>
+              </li>
+              <li>
+                <a href="http://opinion.people.com.cn/n1/2020/0316/c1003-31632762.html"
+                  target="_blank">人民日报人民时评：在春天植下绿色希望</a>
+              </li>
+              <li>
+                <a href="http://finance.people.com.cn/n1/2024/0408/c1004-40211458.html" target="_blank">春来植树添新绿
+                  增厚美丽中国“绿色家底”</a>
+              </li>
+              <li>
+                <a href="https://www.gov.cn/xinwen/2021-04/04/content_5597712.htm" target="_blank">春来植树正当时</a>
+              </li>
+              <li>
+                <a href="https://www.xinhuanet.com/politics/2021-03/12/c_1127201184.htm" target="_blank">植树，用绿色拥抱春天</a>
+              </li>
+            </div>
+          </div>
+          <div class="box_content b2">
+            <h2 style="margin: auto 25px;width: 100%;padding: 30px 10px;"><a
+                href="./detail/treeplant/plant.html#section1">植树小技巧</a>
+            </h2>
+            <div class="cor-wrap">
+              <div class="wrap_s">
+                <a href="./detail/treeplant/plant.html#section1" target="_blank">
+                  <img class="ob-img" src="./treepicture/tree3.jpg" alt="最佳种植时间">
+                  <span>最佳种植时间</span>
+                </a>
+              </div>
+              <div class="wrap_s">
+                <a href="./detail/treeplant/plant.html#section2" target="_blank">
+                  <img class="ob-img" src="./treepicture/tree1.jpg" alt="树种选择">
+                  <span>树种选择</span>
+              </div>
+              <div class="wrap_s">
+                <a href="./detail/treeplant/plant.html#section3" target="_blank">
+                  <img class="ob-img" src="./treepicture/tree2.jpg" alt="种植技巧">
+                  <span>种植技巧</span>
+                </a>
+              </div>
+              <div class="wrap_s">
+                <a href="./detail/treeplant/plant.html#section4" target="_blank">
+                  <img class="ob-img" src="./treepicture/tree4.jpg" alt="日常护理">
+                  <span>日常护理</span>
+                </a>
+              </div>
+            </div>
+            <!-- <div class="box001">
+                <div class="t1"><p>最佳种植时间</p></div>
+                <div class="t1"><p>树种选择</p></div>
+                <div class="t1"><p>种植技巧</p></div>
+                <div class="t1"><p>日常护理</p></div>
+                </div> -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="back_button"><a href="#top" class="iconfont icon-arrowTop"></a></div>
+  <footer>
+    <div class="footer">
+      <div class="list">
+        <dl>
+          <dt>
+            <a href="/theory and shouye/theory.html" target="_blank">科普</a>
+          </dt>
+          <dd>
+            <a href="/theory and shouye/theory.html#kupu" target="_blank">概念</a>
+          </dd>
+          <dd>
+            <a href="/theory and shouye/theory.html#influence" target="_blank">影响</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/new/newall.html" target="_blank">新闻</a>
+          </dt>
+          <dd>
+            <a href="/new/video alone/video.html" target="_blank">视频</a>
+          </dd>
+          <dd>
+            <a href="/new/new alone/text.html" target="_blank">文章</a>
+          </dd>
+          <dd>
+            <a href="/new/yiyang/law alone/laws.html" target="_blank">环保法规</a>
+          </dd>
+          <dd>
+            <a href="/new/yiyang/standard.html" target="_blank">质量标准</a>
+          </dd>
+          <dd>
+            <a href="/new/social alone/social.html" target="_blank">国际组织</a>
+          </dd>
+          <dd>
+            <a href="/new/social alone/social-ch.html" target="_blank">国内组织</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/tips/tips.html" target="_blank">低碳通</a>
+          </dt>
+          <dd>
+            <a href="/tips/detail/greentravel/green.html" target="_blank">绿色出行</a>
+          </dd>
+          <dd>
+            <a href="/tips/detail/rubbish/rubbish.html" target="_blank">垃圾分类</a>
+          </dd>
+          <dd>
+            <a href="/tips/detail/salvage/salvage.html" target="_blank">废物利用</a>
+          </dd>
+          <dd>
+            <a href="/tips/detail/treeplant/plant.html" target="_blank">植树</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/community/community.html" target="_blank">活动</a>
+          </dt>
+          <dd>
+            <a href="/community/community.html#calendar" target="_blank">日历</a>
+          </dd>
+          <dd>
+            <a href="/community/answer.html" target="_blank">答题</a>
+          </dd>
+          <dd>
+            <a href="/community/carbonjs.html" target="_blank">碳足迹计算</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/message/message.html" target="_blank">留言</a>
+          </dt>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/team/team.html" target="_blank">关于我们</a>
+          </dt>
+        </dl>
+      </div>
+
+      <div class="connect">
+        <a href="/team/t4.html" target="_blank"><span class="iconfont icon-news-filling"></span></a>
+        <a href="/team/t4.html" target="_blank"> <span class="span-txt">联系我们</span></a>
+      </div>
+      <div class="banquan">
+        因网络信息传播需要，本网使用的部分作品是从百度百科、新闻网、人民网搜索、转载的，或从第三方或免费资源提供方转载、摘编获得，在授权方面难免出现遗漏。如您对本网相关内容的版权问题存有异议，请您及时与我们联系，并提供您对相关内容拥有著作权的证明文件，我们将及时妥善处理。
+      </div>
+      <div class="name-banquan">
+        © 2024 环保网站 版权所有
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #5da64a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    animation: moveIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes moveIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+p {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.tech-list li {
+    font-size: 1.1em;
+    width: 300px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+
+}
+
+/* 奇数项从右边滑入 */
+.tech-list li:nth-child(odd) {
+    animation-name: slideInFromRight;
+}
+
+/* 偶数项从左边滑入 */
+.tech-list li:nth-child(even) {
+    animation-name: slideInFromLeft;
+    animation-delay: 0.5s;
+    /* 延迟开始以创建交叉效果 */
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.tech-list li::before {
+    content: '✔ ';
+    color: #ffffff;
+}
+
+.tech-list li:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,38 @@
+/* 初始状态，导航菜单隐藏 */
+.nav {
+  display: none;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+
+/* 导航菜单激活状态，显示菜单 */
+.nav.active {
+  display: block;
+  transform: translateX(0);
+}
+
+/* 锁定页面滚动 */
+.lock {
+  overflow: hidden;
+}
+
+/* 汉堡菜单图标 */
+.ham {
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* 汉堡菜单图标激活状态 */
+.ham:hover {
+  background-color: #f0f0f0;
+}
+
+/* 图标样式 */
+.icon-menu:before {
+  content: '☰';
+}
+
+.icon-close:before {
+  content: '✖';
+}

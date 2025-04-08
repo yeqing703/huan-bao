@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>科普</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/iconfont/iconfont two/font_4731952_612rwhqgttu/iconfont.css">
+  <link rel="stylesheet" href="/iconfont/iconfont two/font_4737118_hfl3cy0k7kc/iconfont.css">
+  <link rel="stylesheet" href="/iconfont/iconfont one/iconfont one/iconfont.css">
+<link rel="stylesheet" href="/theory and shouye/theory.css">
+<style>
+  html {
+      scroll-behavior: auto; /* 确保没有平滑滚动 */
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="carousel" id="top">
+    <img class="img3" src="/img/screen23.jpg" alt="">
+    <img class="img3" src="/img/screen1.jpg" alt="">
+    <img class="img3" src="/img/screen2.jpg" alt="">
+    <img class="img3" src="/img/screen21.jpg" alt="">
+    <img class="img3" src="/img/screen4.jpg" alt="">
+    <img class="img3" src="/img/screen5.jpg" alt="">
+    <img class="img3" src="/img/screen6.jpg" alt="">
+    <img class="img3" src="/img/screen20.jpg" alt="">
+    <img class="img3" src="/img/screen3.jpg" alt="">
+    <img class="img3" src="/img/screen22.jpg" alt="">
+    <img class="img3" src="/img/screen0.jpg" alt="">
+  </div>
+  <script>
+    const carousel = document.querySelector('.carousel');
+    const images = document.querySelectorAll('.carousel img');
+    let currentIndex = 0;
+
+    function moveSlide() {
+      // Calculate the new position based on the current index
+      const newPosition = -currentIndex * 100;
+      // Move all images to the new position
+      images.forEach(image => {
+        image.style.transform = `translateX(${newPosition}%)`;
+      });
+    }
+
+    function nextSlide() {
+      currentIndex++;
+      if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+      moveSlide();
+    }
+
+    // Initial move to show the first three images
+    moveSlide();
+
+    // Set interval to automatically move to the next slide every 3 seconds
+    setInterval(nextSlide, 3000);
+  </script>
+  <nav class="nav" >
+    <div class="n1">
+      <form id="searchForm" action="search.html" method="GET" target="_blank">
+        <div class="searchfrom"><div class="seatext"><input type="text" id="searchInput" name="query" placeholder="搜索内容..."></div>
+        <div class="sub"><button type="submit" class="iconfont icon-sousuo" style="font-size: 20px;margin-left: 5px;margin-right: 5px;"></button></div></div>
+    </form>
+      <a href="/homepage/homepage.html" class="navA" target="_blank">首页</a>
+      <a href="/theory and shouye/theory.html" class="navA" target="_blank">科普</a>
+      <a href="/new/newall.html" class="navA" target="_blank">新闻</a>
+      <a href="/tips/tips.html" class="navA" target="_blank">低碳通</a>
+      <a href="/community/community.html" class="navA" target="_blank">活动</a>
+      <a href="/message/message.html" class="navA" target="_blank">留言</a>
+      <a href="/team/team.html" class="navA" target="_blank">关于我们</a>
+    </div>
+  </nav>
+  <!-- 科普 -->
+  <div class="wrap-body">
+    <div id="kepu">
+      <article class="article">
+        <div class="top2">
+          <h1>可持续生活</h1>
+          <h5>Sustainable living</h5>
+        </div>
+        <div class="abstract">
+          <span>
+            一习话
+            <span1 class="iconfont icon-yanjizhushou-shangchuan_yangshengqi" onclick="toggleAudio()"></span1>
+          </span>
+          面向未来，我们要敬畏自然、珍爱地球，树立绿色、低碳、可持续发展理念，尊崇、顺应、保护自然生态，加强气候变化、环境保护、节能减排等领域交流合作，
+          共享经验、共迎挑战，不断开拓生产发展、生活富裕、生态良好的文明发展道路，为我们的子孙后代留下蓝天碧海、绿水青山。
+        </div>
+
+        <audio id="xi" src="/media/xi.mp3" style="display: none;"></audio>
+        <script>
+          function toggleAudio() {
+            var audio = document.getElementById('xi');
+            if (audio.paused) {
+              audio.play();
+            } else {
+              audio.pause();
+            }
+          }
+        </script>
+        <section>
+          <h3><a class="a1" href="https://www.bilibili.com/video/BV1ku41187sb/?s
+        pm_id_from=333.337.search-card.all.click"> 环境责任</a></h3>
+          <p>环境责任是可持续生活的核心，它要求我们认识到自己的行为对地球的影响，并采取行动减少这些影响。
+            这不仅仅是避免污染和保护自然资源，更是积极地修复和保护我们的环境。</p>
+          <p>我们可以通过减少能源消耗、选择清洁能源、使用环保产品、支持环境友好的政策和倡议来实现这一点；
+            也可以通过参与植树活动、保护野生动物栖息地和参与环境清理活动来直接贡献于环境保护。</p>
+          <figure>
+            <img loading="lazy" src="/img/theory1.jpg" alt="">
+            <figcaption> 自然环境</figcaption>
+          </figure>
+
+          <p>环境责任也意味着我们需要关注化学物质的使用，比如减少农药和化肥的使用，转而采用有机和自然的方法来维护我们的花园和农场。</p>
+          <p>这不仅有助于保护土壤和水资源，还能支持生物多样性。
+            通过这些行动，我们不仅能够保护当前的生态系统，还能为未来的世代保留一个更加健康和多样化的地球。</p>
+
+
+          <h3><a class="a1" href="https://news.gmw.cn/2020-09/26/content_34223570.htm">资源效率</a></h3>
+          <p>资源效率是可持续生活的关键原则之一，
+            它强调在生产和消费过程中尽可能地减少资源浪费。这涉及到在各个层面上采取措施，
+            从个人家庭的节能节水，到工业生产中的循环经济和资源回收。</p>
+          <p>例如，我们可以通过安装LED灯泡、节能家电和智能恒温器来减少家庭能源消耗。
+            在农业上，可以通过精准灌溉和有机耕作来减少水资源和土地的浪费。
+            在工业生产中，采用循环经济模式，通过回收和再利用材料来减少对新资源的需求。</p>
+          <table>
+            <tr>
+              <th>邻域</th>
+              <th>实践</th>
+              <th>好处</th>
+            </tr>
+            <tr>
+              <td> 家庭节能 </td>
+              <td> LED灯泡、节能家电</td>
+              <td> 省电、省钱 </td>
+            </tr>
+            <tr>
+              <td>节水 </td>
+              <td>节水装置、精准灌溉</td>
+              <td> 节水、高效 </td>
+            </tr>
+            <tr>
+              <td>循环经济</td>
+              <td> 回收材料、再利用</td>
+              <td> 减废、循环利用</td>
+            </tr>
+            <tr>
+              <td>产品设计 </td>
+              <td>耐用、可修复 </td>
+              <td> 长寿命、减废</td>
+            </tr>
+            <tr>
+              <td>工业生产 </td>
+              <td>循环生产、废物减量</td>
+              <td> 高效、环保</td>
+            </tr>
+          </table>
+          <p>资源效率还意味着我们需要重新思考产品设计，
+            优先选择那些耐用、可修复和可回收的产品。</p>
+          <p>通过这些措施，我们不仅能够减少对环境的压力，还能降低经济成本，实现环境和经济的双赢。</p>
+          <figure>
+            <img loading="lazy" src="/img/theory2.jpg" alt="">
+            <figcaption> LED灯</figcaption>
+          </figure>
+          <h3><a class="a1"
+              href="https://www.bilibili.com/video/BV1wR4y1E7cD/?spm_id_from=333.337.search-card.all.click">
+              绿色消费</a></h3>
+          <p> 绿色消费是可持续生活的重要组成部分，它鼓励我们在购买产品和服务时考虑其对环境的影响。</p>
+          <p>这包括选择那些生产过程中对环境影响较小的产品，比如有机食品、可持续森林认证的纸张和家具、以及使用可再生材料制成的产品。
+            绿色消费还涉及到支持那些采取环保措施的公司，比如那些减少包装浪费、使用清洁能源和实施公平贸易政策的企业。</p>
+
+          <figure>
+            <img loading="lazy" src="/img/theory3.jpg" alt="">
+            <figcaption> 可持续产品</figcaption>
+          </figure>
+          <p>通过我们的购买力，我们可以推动市场向更可持续的方向发展。</p>
+
+          <p>此外，绿色消费也意味着我们需要减少不必要的消费，比如通过共享经济、二手市场和租赁服务来满足我们的需求，而不是不断地购买新产品</p>
+          <p>通过这些方式，我们不仅能够减少资源的消耗，还能减少废物的产生，从而减轻对环境的压力。</p>
+
+          <h3><a class="a1"
+              href="https://www.bilibili.com/video/BV19p421o78v/?spm_id_from=333.337.search-card.all.click">
+              可持续交通</a></h3>
+          <p>可持续交通是实现环境可持续性的关键领域之一。它涉及到寻找和实施更环保的出行方式，以减少交通对环境的影响。</p>
+          <p>这可能意味着更多地步行、骑自行车或使用公共交通工具，这些方式不仅减少了温室气体的排放，
+            还能促进我们的身体健康。对于需要使用汽车的情况，选择燃油效率更高的车型或电动车辆是更好的选择。</p>
+          <p>此外，通过智能城市规划，我们可以创建更适宜步行和骑行的环境，减少对私家车的依赖。</p>
+          <p>可持续交通还包括优化物流和供应链，通过提高运输效率和采用低碳运输方式来减少货物运输的环境影响。</p>
+          <figure>
+            <img loading="lazy" src="/img/theory4.jpg" alt="">
+            <figcaption> 绿色出行</figcaption>
+          </figure>
+
+          <p>在个人层面，我们可以通过拼车、使用货运自行车和支持本地生产的产品来减少交通需求。通过这些措施，我们可以显著减少交通领域的环境足迹，为实现全球气候目标做出贡献。</p>
+
+          <h3><a class="a1" href="https://news.gmw.cn/2020-09/26/content_34223570.htm">社区和合作</a></h3>
+          <p>社区和合作是可持续生活的基础，因为它们促进了资源共享、信息交流和集体行动。
+            通过参与社区花园、工具图书馆、社区支持<a class="a1" href="https://baike.baidu.com/item/%E7%A4%BE%E
+        5%8C%BA%E6%94%AF%E6%8C%81%E5%86%9C%E4%B8%9A/3303972"> 农业（CSA）项目</a>和地方议会，居民可以共同工作以提高生活质量和环境健康。</p>
+          <p>通过这些集体努力，我们可以更有效地应对环境挑战，同时增强社区的韧性和适应能力。</p>
+          <figure>
+            <img loading="lazy" src="/img/theory5.jpg" alt="">
+            <figcaption> 全民种树</figcaption>
+          </figure>
+          <p>此外，社区内的教育项目和工作坊可以帮助居民学习可持续生活的技能和最佳实践，比如如何进行家庭堆肥、
+            如何种植本地植物和如何节约能源。社区合作还意味着在规划和决策过程中考虑到所有成员的需求和观点，确保所有人都能从可持续生活的实践中受益。</p>
+          <p>这些集体努力，我们可以更有效地应对环境挑战，同时增强社区的韧性和适应能力。</p>
+          <h3><a class="a1" href="https://www.bilibili.com/video/BV1Dj421o74Z/?spm_id_from=333.337.search-card.all.click
+        "> 个人行动</a></h3>
+          <p>个人行动是可持续生活的基础，因为它们是我们日常生活中可以直接控制的行为。</p>
+          <p>这包括减少能源和水资源的消耗、采用可持续的饮食、减少废物产生和选择环保产品。
+            例如，我们可以通过安装节水装置、使用节能灯泡和合理调整恒温器来减少家庭能源和水资源的消耗。在饮食方面，
+            我们可以通过减少肉类消费、增加植物性食品的摄入和支持本地农业来实现更可持续的饮食。</p>
+          <p>此外，我们可以通过拒绝一次性塑料制品、使用可重复使用的购物袋和水瓶、以及参与社区回收计划来减少废物的产生。</p>
+          <figure>
+            <img loading="lazy" src="/img/theory6.jpg" alt="">
+            <figcaption> 关水龙头</figcaption>
+
+          </figure>
+          <p>个人还可以通过参与当地的环保活动、志愿者项目和公民科学项目来为更大的环境目标做出贡献。
+            通过不断学习和适应新的习惯，个人可以成为可持续生活的积极推动者，激励他人也采取行动。</p>
+          <p>这些个人行动虽然看似微小，但当每个人都采取这些行动时，
+            它们将汇聚成强大的力量，推动社会向更可持续的方向发展。</p>
+        </section>
+      </article>
+    </div>
+
+  
+    
+ <!-- 影响 -->
+<div class="top-banner" id="influence">
+  <img class="img1" src="/img/protect.png" alt="">
+  <h6>影响</h6>
+  <img class="img1" src="/img/protect2.png" alt="">
+</div>
+<section class="section1">
+  <div class="wrap clear">
+    <div class="cont" id="item1">
+      <p>通过减少资源消耗和废物产生，对环境产生积极影响。此外，可持续农业实践和绿色建筑实践提高了基础设施的弹性，保护和恢复自然生态系统，增强社区对气候变化的适应能力。</p>
+    </div>
+    <a class="nav-item" href="#item1" data-target="item1" style="--color:#5da64a">
+      <img class="img2" src="/img/screen6.jpg" alt="">
+      <span>环境保护</span>
+    </a>
+    <div class="cont" id="item2">
+      <p>节能产品虽初期成本高但长期节省费用；本地食品和二手物品更经济；减少浪费意味着更高效率地利用资源。</p>
+    </div>
+    <a class="nav-item" href="#item2" data-target="item2" style="--color:#b4d0a5">
+      <img class="img2" src="/img/screen0.jpg" alt="">
+      <span>经济节省</span>
+    </a>
+    <div class="cont" id="item3">
+      <p>食用有机食物减少农药风险；步行或骑行有益身心健康；良好空气质量与绿化环境促进整体健康。</p>
+    </div>
+    <a class="nav-item" href="#item3" data-target="item3" style="--color:#5da64a">
+      <img class="img2" src="/img/screen1.jpg" alt="">
+      <span>健康提升</span>
+    </a>
+    <div class="cont" id="item4">
+      <p>推动更多人实践可持续生活可形成积极风气；增强公众环保意识；鼓励企业和政府采取行动支持可持续发展目标。</p>
+    </div>
+    <a class="nav-item" href="#item4" data-target="item4" style="--color:#b4d0a5">
+      <img class="img2" src="/img/screen2.jpg" alt="">
+      <span>社会影响</span>
+    </a>
+    <b class="nav-iitem" href="#item5" style="--color:#5da64a">
+      <p class="p1">
+        <a class="a1" href="https://www.bilibili.com/video/BV1Uq4y1L7JW?t=3.2" target="_blank">
+          <span2 class="iconfont icon-diqiu" style="font-size: 50px;"></span2>》了解详情
+        </a>
+      </p>
+    </b>
+  </div>
+</section>
+<script>
+  // 获取所有导航链接
+  const navLinks = document.querySelectorAll('.nav-item');
+
+  // 为每个链接添加点击事件监听器
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // 阻止默认行为
+
+      // 获取目标内容的ID
+      const targetId = this.getAttribute('data-target');
+
+      // 隐藏所有内容
+      document.querySelectorAll('.cont').forEach(cont => {
+        cont.style.width = '0'; // 隐藏内容
+      });
+
+      // 显示目标内容
+      const targetContent = document.getElementById(targetId);
+      if (targetContent) {
+        targetContent.style.width = '300px'; // 显示目标内容
+      }
+    });
+  });
+</script>
+
+ 
+
+    <!-- 回顶部 -->
+    <div class="back_button"><a href="#top" class="iconfont icon-arrowTop"></a></div>
+  </div>
+  <footer>
+    <div class="footer">
+      <div class="list">
+        <dl>
+          <dt>
+            <a href="/theory and shouye/theory.html" target="_blank">科普</a>
+          </dt>
+          <dd>
+            <a href="/theory and shouye/theory.html#kupu" target="_blank">概念</a>
+          </dd>
+          <dd>
+            <a href="/theory and shouye/theory.html#influence" target="_blank">影响</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/new/newall.html" target="_blank">新闻</a>
+          </dt>
+          <dd>
+            <a href="/new/video alone/video.html" target="_blank">视频</a>
+          </dd>
+          <dd>
+            <a href="/new/new alone/text.html" target="_blank">文章</a>
+          </dd>
+          <dd>
+            <a href="/new/yiyang/law alone/laws.html" target="_blank">环保法规</a>
+          </dd>
+          <dd>
+            <a href="/new/yiyang/standard.html" target="_blank">质量标准</a>
+          </dd>
+          <dd>
+            <a href="/new/social alone/social.html" target="_blank">国际组织</a>
+          </dd>
+          <dd>
+            <a href="/new/social alone/social-ch.html" target="_blank">国内组织</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/tips/tips.html" target="_blank">低碳通</a>
+          </dt>
+          <dd>
+            <a href="/tips/detail/greentravel/green.html" target="_blank">绿色出行</a>
+          </dd>
+          <dd>
+            <a href="/tips/detail/rubbish/rubbish.html" target="_blank">垃圾分类</a>
+          </dd>
+          <dd>
+            <a href="/tips/detail/salvage/salvage.html" target="_blank">废物利用</a>
+          </dd>
+          <dd>
+            <a href="/tips/detail/treeplant/plant.html" target="_blank">植树</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/community/community.html" target="_blank">活动</a>
+          </dt>
+          <dd>
+            <a href="/community/community.html#calendar" target="_blank">日历</a>
+          </dd>
+          <dd>
+            <a href="/community/answer.html" target="_blank">答题</a>
+          </dd>
+          <dd>
+            <a href="/community/carbonjs.html" target="_blank">碳足迹计算</a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/message/message.html" target="_blank">留言</a>
+          </dt>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/team/team.html" target="_blank">关于我们</a>
+          </dt>
+        </dl>
+      </div>
+
+      <div class="connect">
+        <a href="/team/t4.html" target="_blank"><span class="iconfont icon-news-filling"></span></a>
+        <a href="/team/t4.html" target="_blank"> <span class="span-txt">联系我们</span></a>
+      </div>
+      <div class="banquan">
+        因网络信息传播需要，本网使用的部分作品是从百度百科、新闻网、人民网搜索、转载的，或从第三方或免费资源提供方转载、摘编获得，在授权方面难免出现遗漏。如您对本网相关内容的版权问题存有异议，请您及时与我们联系，并提供您对相关内容拥有著作权的证明文件，我们将及时妥善处理。
+      </div>
+      <div class="name-banquan">
+        © 2024 环保网站 版权所有
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

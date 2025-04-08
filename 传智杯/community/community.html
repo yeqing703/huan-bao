@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./community.css">
+
+    <link rel="stylesheet" href="/iconfont/iconfont one/iconfont one/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/iconfont two/font_4737118_hfl3cy0k7kc/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/iconfont two/font_4731952_qpjvyh4ok1/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/iconfont two/font_4737118_3cdgbckabx9/iconfont.css">
+    <link rel="stylesheet" href="/iconfont/iconfont two/font_4731952_612rwhqgttu/iconfont.css">
+    
+
+</head>
+
+<body>
+    <!--社区-->
+    <div class="wrap">
+        <!-- 标题 -->
+        <div class="carousel"  id="top">
+            <img class="img3" src="/img/screen45.jpg" alt="">
+            <img class="img3" src="/img/screen36.jpg" alt="">
+            <img class="img3" src="/img/screen35.jpg" alt="">
+            <img class="img3" src="/img/screen37.jpg" alt="">
+            <img class="img3" src="/img/screen44.jpg" alt="">
+            <img class="img3" src="/img/screen38.jpg" alt="">
+            <img class="img3" src="/img/screen39.jpg" alt="">
+            <img class="img3" src="/img/screen40.jpg" alt="">
+            <img class="img3" src="/img/screen41.jpg" alt="">
+            <img class="img3" src="/img/screen42.jpg" alt="">
+            <img class="img3" src="/img/screen43.jpg" alt="">
+        </div>
+        <script>
+            const carousel = document.querySelector('.carousel');
+            const images = document.querySelectorAll('.carousel img');
+            let currentIndex = 0;
+      
+            function moveSlide() {
+              // Calculate the new position based on the current index
+              const newPosition = -currentIndex * 100;
+              // Move all images to the new position
+              images.forEach(image => {
+                image.style.transform = `translateX(${newPosition}%)`;
+              });
+            }
+      
+            function nextSlide() {
+              currentIndex++;
+              if (currentIndex >= images.length) {
+                currentIndex = 0;
+              }
+              moveSlide();
+            }
+      
+            // Initial move to show the first three images
+            moveSlide();
+      
+            // Set interval to automatically move to the next slide every 3 seconds
+            setInterval(nextSlide, 3000);
+          </script>
+        <!-- 导航 -->
+        <nav class="nav">
+            <div class="n1">
+                <form id="searchForm" action="/homepage/search.html" method="GET" target="_blank">
+                    <div class="searchfrom"><div class="seatext"><input type="text" id="searchInput" name="query" placeholder="搜索内容..."></div>
+                    <div class="sub"><button type="submit" class="iconfont icon-sousuo" style="font-size: 20px;margin-left: 5px;margin-right: 5px;"></button></div></div>
+                </form>
+                <a href="/homepage/homepage.html" class="navA" target="_blank">首页</a>
+                <a href="/theory and shouye/theory.html" class="navA" target="_blank">科普</a>
+                <a href="/new/newall.html" class="navA" target="_blank">新闻</a>
+                <a href="/tips/tips.html" class="navA" target="_blank">低碳通</a>
+                <a href="/community/community.html" class="navA" target="_blank">活动</a>
+                <a href="/message/message.html" class="navA" target="_blank">留言</a>
+                <a href="/team/team.html" class="navA" target="_blank">关于我们</a>
+            </div>
+        </nav>
+        <div class="box-zw">
+            <!-- 日历 -->
+            <div class="top-banner " id="calendar">
+                <span class="iconfont icon-weibiaoti2"></span>
+                <h2>环保节日日历</h2>
+                <span class="iconfont icon-weibiaoti2"></span>
+            </div>
+            <div class="earth calendar">
+                <div class="cover cover-left"></div>
+                <div class="cover cover-right"></div>
+                <div class="book">
+                    <div class="book-page page-left">
+                        <p class="sp">我们既要绿水青山，也要金山银山。
+                            宁要绿水青山，不要金山银山，而且<a class="a2" href="https://baijiahao.baidu.com/s?id=1675083550087159887&wfr=spider&fo
+                            r=pc&searchword=%E7%BB%BF%E6%B0%B4%E9%9D%92%E
+                            5%B1%B1%E5%B0%B1%E6%98%AF%E9%87%91%E5%B1%B1%E9%93%B6%E5%B1%B1" target="_blank">
+                                绿水青山就是金山银山。</a></p>
+
+                        <p class="sp">——2013年9月7日，在哈萨克斯坦纳扎尔巴耶夫大学回答学生问题时指出</p>
+                    </div>
+
+                    <!-- p12 -->
+                    <div class="book-page page-right " id="p12" style="--zindex:0">
+                        <div class="page-front">
+                            <h1 class="title">2024/11</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                </tr>
+                            </table>
+                            <span class="number-page">1</span>
+                            <span class="number-btn" data-id="p12">&gt;</span>
+                        </div>
+                        <div class="page-back">
+                            <h1 class="title">2024/12</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                </tr>
+                            </table>
+                            <span class="number-page">2</span>
+                            <span class="number-btn" data-id="p12">&lt;</span>
+                        </div>
+                    </div>
+
+                    <!-- p34 -->
+                    <div class="book-page page-right " id="p34" style="--zindex:1">
+                        <div class="page-front">
+                            <h1 class="title">2025/01</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr>
+
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                </tr>
+                            </table>
+                            <span class="number-page">3</span>
+                            <span class="number-btn" data-id="p34">&gt;</span>
+                        </div>
+                        <div class="page-back">
+                            <h1 class="title">2025/02</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+
+                                </tr>
+                                <tr>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                </tr>
+                            </table>
+                            <span class="number-page">4</span>
+                            <span class="number-btn" data-id="p34">&lt;</span>
+                        </div>
+                    </div>
+
+                    <!-- p56 -->
+                    <div class="book-page page-right " id="p56" style="--zindex:2">
+                        <div class="page-front">
+                            <h1 class="title">2025/03</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td><a class="a1" href="http://baike.baidu.com/l/hROHSfu5" target="_blank">12<span
+                                                class="iconfont icon-shijie"></a></span>
+                                    </td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td><a class="a1" href="https://www.bilibili.com/video/BV1rs4y1n7fm/?spm_id
+                                from=333.337.search-card.all.click" target="_blank">22<span
+                                                class="iconfont icon-shijie"></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a class="a1" href="https://www.bilibili.com/video/BV1zz421Z7gw/"
+                                            target="_blank">23</a><span class="iconfont icon-shijie"></span></td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                </tr>
+
+                                <tr>
+                                    <td>30</td>
+                                    <td>31</td>
+                                </tr>
+                            </table>
+                            <span class="number-page">5</span>
+                            <span class="number-btn" data-id="p56">&gt;</span>
+                        </div>
+                        <div class="page-back">
+                            <h1 class="title">2025/04</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a class="a1" href="https://livechina.cctv.com/zhuanti/2023/gjanr/index.shtml"
+                                            target="_blank">1<span class="iconfont icon-shijie"></span></a></td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td>6</td>
+
+                                    <td><a class="a1" href="http://baike.baidu.com/l/V9Vt5WXD" target="_blank">7<span
+                                                class="iconfont icon-shijie"></span></a></td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+
+
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                </tr>
+                                <tr>
+
+
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td><a class="a1"
+                                            href="https://local.cctv.com/2024/10/12/VIDExXgkfF7OQU5hrhMDciff241012.shtml"
+                                            target="_blank">22<span class="iconfont icon-shijie"></span></a></td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                </tr>
+                                <tr>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+
+                                </tr>
+                            </table>
+                            <span class="number-page">6</span>
+                            <span class="number-btn" data-id="p56">&lt;</span>
+                        </div>
+                    </div>
+
+                    <!-- p78 -->
+                    <div class="book-page page-right " id="p78" style="--zindex:3">
+                        <div class="page-front">
+                            <h1 class="title">2025/05</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                </tr>
+                                <tr>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td><a class="a1" href="https://www.bilibili.com/video/BV1EA4y1Z7gN/"
+                                            target="_blank">31<span class="iconfont icon-shijie"></span></a></td>
+                                </tr>
+                            </table>
+                            <span class="number-page">7</span>
+                            <span class="number-btn" data-id="p78">&gt;</span>
+                        </div>
+                        <div class="page-back">
+                            <h1 class="title">2025/06</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td><a class="a1" href="https://www.mee.gov.cn/home/ztbd/2024/65hjr2024/"
+                                            target="_blank">5<span class="iconfont icon-shijie"></span></a></td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td><a class="a1" href="https://www.bilibili.com/video/BV1ng4y1K7aJ/?spm_id_from=333.337.se
+                                arch-card.all.click" target="_blank">17<span class="iconfont icon-shijie"></span></a>
+                                    </td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>30</td>
+                                </tr>
+                            </table>
+                            <span class="number-page">8</span>
+                            <span class="number-btn" data-id="p78">&lt;</span>
+                        </div>
+                    </div>
+
+                    <!-- p910 -->
+                    <div class="book-page page-right " id="p910" style="--zindex:4">
+                        <div class="page-front">
+                            <h1 class="title">2025/07</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                </tr>
+                                <tr>
+
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                </tr>
+                            </table>
+                            <span class="number-page">9</span>
+                            <span class="number-btn" data-id="p910">&gt;</span>
+                        </div>
+                        <div class="page-back">
+                            <h1 class="title">2025/08</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>31</td>
+                                </tr>
+                            </table>
+                            <span class="number-page">10</span>
+                            <span class="number-btn" data-id="p910">&lt;</span>
+                        </div>
+                    </div>
+
+                    <!-- p1112 -->
+                    <div class="book-page page-right " id="p1112" style="--zindex:5">
+                        <div class="page-front">
+                            <h1 class="title">2025/09</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td><a class="a1" href="https://www.bilibili.com/video/BV1A64y1N7M5/?spm_id_f
+                            rom=333.337.search-card.all.click" target="_blank">15<span
+                                                class="iconfont icon-shijie"></span></a></td>
+                                    <td><a class="a1" href="https://www.bilibili.com/video/BV1DC4y1f7qz/?spm_id_f
+                              rom=333.337.search-card.all.click2" target="_blank">16<span
+                                                class="iconfont icon-shijie"></span></a></td>
+
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+
+                                </tr>
+                            </table>
+                            <span class="number-page">11</span>
+                            <span class="number-btn" data-id="p1112">&gt;</span>
+                        </div>
+                        <div class="page-back">
+                            <h1 class="title">2025/10</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td><a class="a1" href="http://baike.baidu.com/l/OqCJl3lj" target="_blank">4<span
+                                                class="iconfont icon-shijie"></span></a></td>
+
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                </tr>
+                            </table>
+                            <span class="number-page">12</span>
+                            <span class="number-btn" data-id="p1112">&lt;</span>
+                        </div>
+                    </div>
+
+
+
+                    <!-- p1314 -->
+                    <div class="book-page page-right " id="p1314" style="--zindex:6">
+                        <div class="page-front">
+                            <h1 class="title">2025/11</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+
+                                </tr>
+                                <tr>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                </tr>
+
+                                <tr>
+                                    <td>30</td>
+                                </tr>
+                            </table>
+                            <span class="number-page">13</span>
+                            <span class="number-btn" data-id="p1314">&gt;</span>
+                        </div>
+                        <div class="page-back">
+                            <h1 class="title">2025/12</h1>
+                            <table class="table2">
+                                <tr>
+                                    <th>日</th>
+                                    <th>一</th>
+                                    <th>二</th>
+                                    <th>三</th>
+                                    <th>四</th>
+                                    <th>五</th>
+                                    <th>六</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+
+                                </tr>
+                            </table>
+                            <span class="number-page">14</span>
+                            <span class="number-btn" data-id="p1314">&lt;</span>
+                        </div>
+                    </div>
+
+                    <!-- p1516 -->
+                    <div class="book-page page-right " id="p1516" style="--zindex:7">
+                        <div class="page-front">
+                            <h1 class="title">p15</h1>
+                            <span class="number-page">15</span>
+                            <span class="number-btn" data-id="p1516">&gt;</span>
+                        </div>
+                        <div class="page-back">
+                            <h1 class="title">p16</h1>
+                            <span class="number-page">16</span>
+                            <span class="number-btn" data-id="p1516">&lt;</span>
+                        </div>
+                    </div>
+
+                    <div class="book-page page-left end" style="--zindex:7">
+                        <div class="logo-img"> <img src="/img/green.jpeg" alt=""></div>
+                        <a href="./earth festival.html" class="a3">>>查看更多</a>
+                      
+                    </div>
+                </div>
+            </div>
+            <script>
+                function toggleShake() {
+                    const icon = document.querySelector('.iconfont');
+                    icon.classList.add('shake'); // 添加晃动动画
+
+                 // 动画结束后移除类
+                   icon.addEventListener('animationend', () => {
+                   icon.classList.remove('shake');
+                }, { once: true }); // 确保事件只触发一次
+            }
+            </script>
+
+            <div class="together">
+                <div class="title-rl">
+                    <span class="iconfont icon-weibiaoti2"></span>
+                    <h2>碳足迹与环保问答</h2>
+                    <span class="iconfont icon-weibiaoti2"></span>
+                </div>
+
+                <div class="sjz">
+                    <div class="left" id="cout">
+                        <div class="icon">
+                            <a href="/community/carbonjs.html" style="text-decoration: none;">
+                                <img src="./tanzujijis.png" alt=" 碳足迹计算">
+                                <div>
+                                    <h3>碳足迹计算</h3>
+                                    <p>碳足迹概念的推出，旨在提醒人们要意识到应对气候变化的紧迫性。通过计算和了解个人或组织的碳足迹，可以帮助人们识别和实施减少温室气体排放的策略，进而对抗全球变暖。
+                                    </p>
+                                    <span class="iconfont icon-arrow-double-right">点击进入</span>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="right" id="answer">
+                        <div class="icon">
+                            <a href="/community/answer.html" style="text-decoration: none;">
+                                <img src="./datijiangli.png" alt="答题入口">
+                                <div>
+                                    <h3>环保知识小问答</h3>
+                                    <p>环保知识小问答提升公众环保意识，普及知识，促进行为改变。通过问答形式，可以提高公众对环保问题的认识和理解，使更多人关注环境问题。
+                                    </p>
+                                    <span class="iconfont icon-arrow-double-right">点击进入</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bottom" id="ask">
+                        <div class="icon">
+                            <a href="/community/ask.html" style="text-decoration: none;">
+                                <img src="./ai.png" alt="答题入口">
+                                <div>
+                                    <h3>智能问答</h3>
+                                    <p>接入DeepSeek,Deepseek作为一款基于人工智能的语言模型，以其强大的智能能力，成为环保人士的得力助手。
+                                    </p>
+                                    <span class="iconfont icon-arrow-double-right">点击进入</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--答题-->
+
+    </div>
+    <!--返回-->
+    <div class="back_button"><a href="#top" class="iconfont icon-arrowTop"></a></div>
+    <!-- 底部链接 -->
+    <footer>
+        <div class="footer">
+            <div class="list">
+                <dl>
+                    <dt>
+                        <a href="/theory and shouye/theory.html" target="_blank">科普</a>
+                    </dt>
+                    <dd>
+                        <a href="/theory and shouye/theory.html#kupu" target="_blank">概念</a>
+                    </dd>
+                    <dd>
+                        <a href="/theory and shouye/theory.html#influence" target="_blank">影响</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/new/newall.html" target="_blank">新闻</a>
+                    </dt>
+                    <dd>
+                        <a href="/new/video alone/video.html" target="_blank">视频</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/new alone/text.html" target="_blank">文章</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/yiyang/law alone/laws.html" target="_blank">环保法规</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/yiyang/standard.html" target="_blank">质量标准</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/social alone/social.html" target="_blank">国际组织</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/social alone/social-ch.html" target="_blank">国内组织</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/tips/tips.html" target="_blank">低碳通</a>
+                    </dt>
+                    <dd>
+                        <a href="/tips/detail/greentravel/green.html" target="_blank">绿色出行</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/rubbish/rubbish.html" target="_blank">垃圾分类</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/salvage/salvage.html" target="_blank">废物利用</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/treeplant/plant.html" target="_blank">植树</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/community/community.html" target="_blank">活动</a>
+                    </dt>
+                    <dd>
+                        <a href="/community/community.html#calendar" target="_blank">日历</a>
+                    </dd>
+                    <dd>
+                        <a href="/community/answer.html" target="_blank">答题</a>
+                    </dd>
+                    <dd>
+                        <a href="/community/carbonjs.html" target="_blank">碳足迹计算</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/message/message.html" target="_blank">留言</a>
+                    </dt>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/team/team.html" target="_blank">关于我们</a>
+                    </dt>
+                </dl>
+            </div>
+
+            <div class="connect">
+                <a href="/team/t4.html" target="_blank"><span class="iconfont icon-news-filling"></span></a>
+                <a href="/team/t4.html" target="_blank"> <span class="span-txt">联系我们</span></a>
+            </div>
+            <div class="banquan">
+                因网络信息传播需要，本网使用的部分作品是从百度百科、新闻网、人民网搜索、转载的，或从第三方或免费资源提供方转载、摘编获得，在授权方面难免出现遗漏。如您对本网相关内容的版权问题存有异议，请您及时与我们联系，并提供您对相关内容拥有著作权的证明文件，我们将及时妥善处理。
+            </div>
+            <div class="name-banquan">
+                © 2024 环保网站 版权所有
+            </div>
+        </div>
+    </footer>
+
+    <!-- 日历翻页js -->
+    <script>
+        const btns = document.querySelectorAll('.number-btn')
+        btns.forEach((btn, ind) => {
+            btn.addEventListener('click', e => {
+                const id = e.target.dataset.id
+                const page = document.getElementById(id)
+                if (page.classList.contains('turn')) {
+                    page.classList.remove('turn')
+                    setTimeout(() => {
+                        page.style.zIndex = 20 - ind
+                    }, 500)
+                } else {
+                    page.classList.add('turn')
+                    setTimeout(() => {
+                        page.style.zIndex = 20 + ind
+                    }, 500)
+                }
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>

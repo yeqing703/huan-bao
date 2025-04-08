@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队介绍</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #5da64a;
+            --second-bg-color: #669c58;
+            --nav-bg-color: rgba(255, 255, 255, .1);
+            --main-color: #104503;
+            --second-color: #84b777;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            border: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            font-size: 62.6%;
+        }
+
+        body {
+            font-size: 1.6rem;
+            color: #fff;
+            overflow: hidden;
+        }
+
+         a {
+            font-size: 4rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+           color: #000000;
+        } 
+
+
+        .wrap {
+            width: 100vw;
+            height: 100vh;
+            perspective: 1000px;
+        }
+
+        .sides {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform-origin: 50% 50% -50vw;
+            transform: scale(1) rotateY(0deg);
+            backface-visibility: hidden;
+            transition: 2s;
+            animation: cube-ani 4s ease-in-out backwards;
+        }
+
+        @keyframes cube-ani {
+            0% {
+                transform: scale(0) rotateY(360deg);
+            }
+
+            100% {
+                transform: scale(1) rotateY(0deg);
+            }
+        }
+
+        .article-title {
+            color: rgb(0, 0, 0);
+            font-size: 4rem;
+            line-height: 2rem;
+            font-weight: 600;
+            margin: 40px auto;
+            text-align: center;
+            width: 80%; 
+            cursor: pointer;
+            transition: opacity 1s ease;
+        }
+
+        .side {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-color);
+            color: #fff;
+            padding: 0 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            transform-style: preserve-3d;
+            transform-origin: 50% 50% -50vw;
+            backface-visibility: hidden;
+        }
+
+        .sides .side:nth-child(even) {
+            background-color: var(--second-bg-color);
+        }
+
+        .side:nth-child(even) {
+            background-color: var(--second-bg-color);
+        }
+
+        .side.home {
+            transform: rotateY(0);
+        }
+
+        .side.work {
+            transform: rotateY(90deg);
+        }
+
+        .side.team {
+            transform: rotateY(180deg);
+        }
+
+        .side.contact {
+            transform: rotateY(270deg);
+        }
+
+        .pages {
+            position: absolute;
+            left: 50%;
+            bottom: 2rem;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 350px;
+            background-color: var(--nav-bg-color);
+            border-radius: 5rem;
+            animation: nav-ani 1s ease-in-out backwards;
+            animation-delay: 4s;
+        }
+
+        .pages li {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .pages li i {
+            font-size: 3rem;
+        }
+
+        .pages li:hover i {
+            color: var(--main-color);
+        }
+
+        .pages li span {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .pages li:hover span {
+            top: -4rem;
+            opacity: 1;
+        }
+
+        @keyframes nav-ani {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            html {
+                font-size: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="sides">
+            <div class="side home"><a href="/team/t1.html">>>关于我们</a></div>
+            <div class="side work"><a href="/team/t2.html">工作分配</a></div>
+            <div class="side team"><a href="/team/t3.html">应用技术</a></div>
+            <div class="side contact"><a href="/team/t4.html">联系方式</a></div>
+        </div>
+    </div>
+<ul class="pages">
+<li data-page="home"><i class='bx bxs-home'></i><span>我们</span></li>
+<li data-page="work"><i class='bx bxs-notepad'></i><span>工作</span></li>
+<li data-page="team"><i class='bx bxs-shopping-bag'></i><span>技术</span></li>
+<li data-page="contact"><i class='bx bxs-envelope'></i><span>联系</span></li>
+    </ul>
+    <script>
+        const sides = document.querySelector('.sides');
+sides.addEventListener('animationend', () => {
+    const lis = document.querySelectorAll('.pages li');
+    lis.forEach((li, ind) => {
+        li.addEventListener('click', function (event) {
+            event.preventDefault(); // 阻止默认行为
+            sides.style.transform = `rotateY(${ind * -90}deg)`;
+            setTimeout(() => {
+                document.querySelector('.side.' + this.getAttribute('data-page')).querySelector('a').click(); // 延迟执行链接点击
+            }, 2000); 
+        });
+    });
+});
+ 
+    </script>
+</body>
+</html>

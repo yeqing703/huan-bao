@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video::-webkit-media-controls {
+            display:none !important;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            var video = document.querySelector('video');
+            if (video.play) {
+                video.play().catch(function(error) {
+                    console.log("Autoplay was prevented.");
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <video width="100%" controls autoplay muted>
+        <source src="/img/home1.5.jpg" type="video/mp4">
+    </video>
+</body>
+</html>

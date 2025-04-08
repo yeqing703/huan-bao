@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz with Hiding Questions</title>
+    <style>
+        .question {
+            margin-bottom: 20px;
+            display: none; /* Hide all questions initially */
+        }
+        .question.active {
+            display: block; /* Show the active question */
+        }
+        #result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="question1" class="question active">
+    <h2>Question 1: Is Paris the capital of France?</h2>
+    <label><input type="radio" name="q1" value="true"> True</label>
+    <label><input type="radio" name="q1" value="false"> False</label>
+    <button onclick="checkAnswer(1)">Submit</button>
+    <p id="result1"></p>
+</div>
+
+<div id="question2" class="question">
+    <h2>Question 2: Is Sydney the capital of Australia?</h2>
+    <label><input type="radio" name="q2" value="true"> True</label>
+    <label><input type="radio" name="q2" value="false"> False</label>
+    <button onclick="checkAnswer(2)">Submit</button>
+    <p id="result2"></p>
+</div>
+
+<!-- Add more questions in the same pattern -->
+
+<script>
+    const questions = [
+        { question: "Is Paris the capital of France?", answer: "false", id: 1 },
+        { question: "Is Sydney the capital of Australia?", answer: "true", id: 2 },
+        // Add more questions here
+    ];
+
+    let currentQuestion = 0;
+
+    function showQuestion(index) {
+        const allQuestions = document.querySelectorAll('.question');
+        allQuestions.forEach((question, i) => {
+            question.classList.remove('active');
+        });
+        const current = document.getElementById(`question${index + 1}`);
+        current.classList.add('active');
+    }
+
+    function checkAnswer(questionNumber) {
+        const question = questions[questionNumber - 1];
+        const answers = document.getElementsByName('q' + questionNumber);
+        const result = document.getElementById('result' + questionNumber);
+        let userAnswer = '';
+
+        for (let i = 0; i < answers.length; i++) {
+            if (answers[i].checked) {
+                userAnswer = answers[i].value;
+                break;
+            }
+        }
+
+        if (userAnswer === question.answer) {
+            result.innerHTML = "Correct!";
+            result.style.color = "green";
+        } else {
+            result.innerHTML = "Wrong!";
+            result.style.color = "red";
+        }
+
+        // Show next question after 3 seconds
+        setTimeout(() => {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                showQuestion(currentQuestion);
+            } else {
+                // End of quiz
+                alert("Quiz completed!");
+            }
+        }, 3000);
+    }
+
+    // Initialize the quiz
+    showQuestion(currentQuestion);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/iconfont/iconfont one/iconfont one/iconfont.css">
+    <link rel="stylesheet" href="/homepage/homepage.css">
+    <link rel="stylesheet" href="/index.js">
+</head>
+
+<body>
+    <!--首页-->
+    <!-- home1 -->
+    <div class="container" id="top">
+        <div class="bg-slide active">
+            <div class="circle bg">
+                <a href=""><img src="/img/home1.1.jpg" alt="" class="img"></a>
+            </div>
+            <div class="circle large">
+                <img src="/img/home1.1.jpg" alt="" class="img">
+            </div>
+            <div class="circle small">
+                <img src="/img/home1.1.jpg" alt="" class="img">
+            </div>
+            <div class="cont-text">
+                <h1 class="place"><a href="/theory and shouye/home1.html" target="_blank">生态护林员</a></h1>
+                <h2 class="country">林间轻语，护林人影绰绰。绿意盎然，你们是自然的诗篇。</h2>
+            </div>
+        </div>
+
+        <div class="bg-slide">
+            <div class="circle bg">
+                <img src="/img/home1.5.jpg" alt="">
+                <!-- <video id="video1" width="100%" controls autoplay muted loop>
+                    <source src="/media/home1.5.mp4" type="">
+                </video>
+                <a href="/theory and shouye/home1.5.html"></a> -->
+            </div>
+            <div class="circle large">
+                <img src="/img/home1.5.jpg" alt="">
+            </div>
+            <div class="circle small">
+                <img src="/img/home1.5.jpg" alt="">
+            </div>
+            <div class="cont-text">
+                <h1 class="place">自然</h1>
+                <h2 class="country">向阳之花，林间轻吟。向日葵海，金色梦境，温暖每个晨曦。</h2>
+            </div>
+        </div>
+        <div class="bg-slide">
+            <div class="circle bg">
+                <img src="/img/home1.2.jpg" alt="">
+            </div>
+            <div class="circle large">
+                <img src="/img/home1.2.jpg" alt="">
+            </div>
+            <div class="circle small">
+                <img src="/img/home1.2.jpg" alt="">
+            </div>
+            <div class="cont-text">
+                <h1 class="place"><a href="/new/new alone/kcxcpyfw/cp2.html" target="_blank">环境与科技</a></h1>
+                <h2 class="country">科技之光，照亮未来。携手环保，共筑可持续生活新篇章。</h2>
+            </div>
+        </div>
+        <div class="bg-slide">
+            <div class="circle bg">
+                <img src="/img/home1.3.jpg" alt="">
+            </div>
+            <div class="circle large">
+                <img src="/img/home1.3.jpg" alt="">
+            </div>
+            <div class="circle small">
+                <img src="/img/home1.3.jpg" alt="">
+            </div>
+            <div class="cont-text">
+                <h1 class="place"><a href="/tips/detail/greentravel/green.html#section2" target="_blank">绿色出行</a></h1>
+                <h2 class="country">轻踏车铃，风拂过林梢。与自然同行，绘出绿色诗行。</h2>
+            </div>
+        </div>
+        <div class="bg-slide">
+            <div class="circle bg">
+                <img src="/img/home1.4.png" alt="">
+            </div>
+            <div class="circle large">
+                <img src="/img/home1.4.png" alt="">
+            </div>
+            <div class="circle small">
+                <img src="/img/home1.4.png" alt="">
+            </div>
+            <div class="cont-text">
+                <h1 class="place"><a href="/theory and shouye/home1.4.html" target="_blank">环保政策</a></h1>
+                <h2 class="country">绿色新政，绘未来蓝图。共筑生态梦，守护地球家园。</h2>
+            </div>
+        </div>
+        <div class="circle-trans"></div>
+        <div class="line"></div>
+        <div class="spin"></div>
+    </div>
+
+    <script>
+        const spin = document.querySelector('.spin');
+        const slides = document.querySelectorAll('.bg-slide');
+        const len = slides.length;
+        let ind = 0;
+        let intervalId;
+
+
+        function cycleSlides() {
+            spin.classList.add('active');
+            setTimeout(() => {
+                spin.classList.remove('active');
+            }, 1000);
+
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+                slide.classList.remove('after-active');
+            });
+
+            slides[ind].classList.add('active');
+
+            ind = (ind + 1) % len;
+        }
+
+
+        function startAutoCycle() {
+            intervalId = setInterval(cycleSlides, 5000);
+        }
+
+
+        function stopAutoCycle() {
+            clearInterval(intervalId);
+        }
+        window.addEventListener('load', startAutoCycle);
+        spin.addEventListener('click', stopAutoCycle);
+        spin.addEventListener('click', () => {
+            setTimeout(startAutoCycle, 1000);
+        });
+    </script>
+    <!--首页-->
+    <nav class="nav">
+        <div class="n1">
+            <form id="searchForm" action="search.html" method="GET" target="_blank">
+                <div class="searchfrom"><div class="seatext"><input type="text" id="searchInput" name="query" placeholder="搜索内容..."></div>
+                <div class="sub"><button type="submit" class="iconfont icon-sousuo" style="font-size: 20px;margin-left: 5px;margin-right: 5px;"></button></div></div>
+            </form>
+            <a href="/homepage/homepage.html" class="navA" target="_blank">首页</a>
+            <a href="/theory and shouye/theory.html" class="navA" target="_blank">科普</a>
+            <a href="/new/newall.html" class="navA" target="_blank">新闻</a>
+            <a href="/tips/tips.html" class="navA" target="_blank">低碳通</a>
+            <a href="/community/community.html" class="navA" target="_blank">活动</a>
+            <a href="/message/message.html" class="navA" target="_blank">留言</a>
+            <a href="/team/team.html" class="navA" target="_blank">关于我们</a>
+        </div>
+    </nav>
+    <!--结果列表-->
+    <ul id="searchResults"></ul>
+
+    <div class="home2">
+        <div class="text">
+            <div class="border">
+                <h1 class="push-in">可持续生活</h1>
+                <p class="push-in">可持续生活是指我们在日常生活中采取的行动和选择，旨在减少对环境的负面影响，
+                    同时满足当前和未来世代的需求。这包括节约资源、减少废物、选择环保产品、支持本地经济和保护生物多样性。
+                    简而言之，就是过一种既环保又对后代负责的生活方式。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--新闻-->
+    <div class="wrap">
+        <div class="all" id="top">
+            <!--首页：新闻-->
+            <a href="/new/newall.html" target="_blank" class="h1-a">
+                <h1>新闻</h1>
+            </a>
+            <div class="box-1">
+                <div class="new">
+                    <span class="iconfont icon-shipin1">视频</span>
+                    <a href="/new/video alone/video.html" target="_blank"
+                        class="iconfont icon-arrow-double-right">查看更多</a>
+                </div>
+                <div class="text-wz">
+                    <span class="iconfont icon-wenzhangfenlei">文章</span>
+                    <a href="/new/new alone/text.html" target="_blank" class="iconfont icon-arrow-double-right">查看更多</a>
+                </div>
+            </div>
+            <div class="big">
+                <div class="video">
+                    <div class="box-new">
+                        <a href="https://tv.cctv.com/2024/07/20/VIDE7vytpbsWmilNSrtxUmPQ240720.shtml" target="_blank">
+                            <div class="hidden-image">
+                                <img src="/picture/28.png" alt="封面" class="image">
+                            </div>
+                        </a>
+                        <a href="https://live.baidu.com/m/media/pclive/pchome/live.html?type=live&action=liveshow&live_type=review&room_id=3961443431"
+                            target="_blank">
+                            <div class="hidden-image">
+                                <img src="/picture/24.png" alt="封面" class="image">
+                            </div>
+                        </a>
+                        <a href="https://live.baidu.com/m/media/pclive/pchome/live.html?room_id=8589163876&source=h5pre"
+                            target="_blank">
+                            <div class="hidden-image">
+                                <img src="/picture/25.png" alt="封面" class="image">
+                            </div>
+                        </a>
+                        <a href="http://news.cctv.com/2019/09/11/VIDEzXzjVnRkSjkJk8kTvxmG190911.shtml?spm=C90324.Pfdd0SYeqktv.Eri5TUDwaTXO.76"
+                            target="_blank">
+                            <div class="hidden-image">
+                                <img src="/picture/29.png" alt="封面" class="image">
+                            </div>
+                        </a>
+                        <a href="https://live.baidu.com/m/media/pclive/pchome/live.html?type=live&action=liveshow&live_type=review&room_id=3702589779"
+                            target="_blank">
+                            <div class="hidden-image">
+                                <img src="/picture/27.png" alt="封面" class="image">
+                            </div>
+                        </a>
+                        <a href="http://news.cctv.com/2019/05/24/VIDE9vzEDIUMjejtQvty9Z6C190524.shtml?spm=C90324.Pfdd0SYeqktv.Eri5TUDwaTXO.86"
+                            target="_blank">
+                            <div class="hidden-image">
+                                <img src="/picture/30.png" alt="封面" class="image">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="background">
+                    <div class="content-wz">
+                        <table class="content-table">
+                            <tr>
+                                <td>
+                                    <h2 class="tiltle-small">节能降耗“神器”落地四座水厂 碧水源振动MBR行业应用加速
+                                    </h2>
+                                    <a href="/new/new alone/kcxcpyfw/cp1.html" target="_blank">
+                                        <p class="text-p">
+                                            碧水源耗时8年，研发投入超2亿元，创新开发出振动MBR技术，利用膜组器机械振动的方式代替膜池的高强度曝气，抗污染能耗较曝气MBR降低60%以上，解决了其高能耗的技术痛点。
+                                        </p>
+                                    </a>
+
+                                    <div class="date">
+                                        <time>2024/09/29</time>
+                                        <a href="/new/new alone/kcxcpyfw/cp1.html" target="_blank"
+                                            class="iconfont icon-arrow-double-right"></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 class="tiltle-small">深圳可飞灵嗅P1-X机器狗面世 集创新与实用于一身
+                                    </h2>
+                                    <a href="/new/new alone/kcxcpyfw/cp2.html" target="_blank">
+                                        <p class="text-p">
+                                            近日，深圳市可飞科技有限公司推出一款全新的环境监测工具——灵嗅P1-X机器狗，其以独特的创新性和实用性，吸引了众多行业用户的关注。</p>
+                                    </a>
+                                    <div class="date">
+                                        <time>2024/10/31</time>
+                                        <a href="/new/new alone/kcxcpyfw/cp2.html" target="_blank"
+                                            class="iconfont icon-arrow-double-right"></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2 class="tiltle-small">
+                                        智能温控、再生纤维..今年秋冬服饰科技、环保与个性化并重</h2>
+                                    <a href="/new/new alone/kcxcpyfw/cp3.html" target="_blank">
+                                        <p class="text-p">
+                                            随着季节的更迭，秋冬服饰市场迎来了新一轮的变革。随着全国绝大部分地区普遍进入秋冬季节，人们在服装方面也开始主动寻找能够抵御寒冷、同时展现个性的服装。
+                                        </p>
+                                    </a>
+                                    <div class="date">
+                                        <time>2024/10/18</time>
+                                        <a href="/new/new alone/kcxcpyfw/cp3.html" target="_blank"
+                                            class="iconfont icon-arrow-double-right"></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="together">
+            <script src="/iconfont/iconfont one/iconfont one/iconfont.js"></script>
+            <div class="title-fen">
+                <h2 class="iconfont icon-standard_code">法律政策</h2>
+                <nav class="daohang">
+                    <div class="dandu">
+                        <a href="/new/yiyang/laws.html" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-huanbaojilu"></use>
+                            </svg>
+                            <span class="cont">环保法规</span>
+                        </a>
+                    </div>
+                    <div class="dandu">
+                        <a href="/new/yiyang/standard.html" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shengtaiyanjiu"></use>
+                            </svg>
+                            <span class="cont">质量标准</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <div class="title-fen">
+                <h2 class="iconfont icon-xiezhu">社会支持</h2>
+                <nav class="daohang">
+                    <div class="dandu">
+                        <a href="/new/social alone/social-ch.html" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-huanbaoshequ"></use>
+                            </svg>
+                            <span class="cont">国内组织</span>
+                        </a>
+                    </div>
+                    <div class="dandu">
+                        <a href="/new/social alone/social.html" target="_blank">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shengtaidiqiu"></use>
+                            </svg>
+                            <span class="cont">国际组织</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+        <!--tips-->
+        <div class="box">
+            <a href="/tips/tips.html" target="_blank"><strong>
+                    <p style="font-size: 3ch;color: #468f57;padding: 15px;">低碳通</p>
+                </strong></a>
+            <div class="content">
+                <div class="box01">
+                    <div class="c_buttom"><a href="/tips/tips.html#绿色出行">绿色出行</a></div>
+                    <div class="c_buttom"><a href="/tips/tips.html#垃圾分类">垃圾分类</a></div>
+                </div>
+                <div class="box02">
+                    <div class="c_buttom"><a href="/tips/tips.html#废物利用">废物利用</a></div>
+                    <div class="c_buttom"><a href="/tips/tips.html#植树">植树</a></div>
+                </div>
+            </div>
+            <br>
+            <a href="/tips/tips.html" target="_blank"><strong>
+                    <p class="iconfont icon-arrow-double-right">查看更多</p>
+                </strong></a>
+        </div>
+    </div>
+    <div class="background-two">
+        <div class="body">
+            <div class="advocate">
+                <div class="small-background">
+                    <h2>呼吁</h2>
+                    <p>
+                        地球正以我们无法承受的速度恶化。现在，是时候采取行动了。<br>
+                        减少浪费，绿色出行，节约资源，保护环境。<br>
+                        每个人的小小努力，都是地球未来希望的开始。<br>
+                        行动起来，为了我们共同的家园。<br>
+                        让我们从现在做起，从自己做起，共同为实现环境的可持续发展而努力。
+                    </p>
+                </div>
+                <div class="know">
+                    <a href="#" id="toggleBox" class="iconfont icon-news-filling">我已知悉,成为志愿者</a>
+                    <div id="overlay" class="overlay">
+                        <div class="register">
+                            <button class="close-btn" onclick="closePopup()">&times;</button>
+                            <form name="register" id="userForm">
+                                <h1>报名</h1>
+                                <label class="title" for="uname">你的名字</label>
+                                <input class="ipt" type="text" id="uname" placeholder="your name">
+                                <label class="title" for="umail">你的邮件</label>
+                                <input class="ipt" type="text" id="umail" placeholder="your email">
+                                <label class="title" for="uaddress">你的所在地</label>
+                                <input class="ipt" type="text" id="uaddress" placeholder="your address">
+                                <button class="btn btn-submit" id="login">提交</button>
+                                <button class="btn btn-reset-one" type="reset">重设</button>
+                                <!-- 提示信息容器 -->
+                                <div id="successMessage">恭喜您报名成功！</div>
+                            </form>
+                            <div id="message"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="list">
+                <dl>
+                    <dt>
+                        <a href="/theory and shouye/theory.html" target="_blank">科普</a>
+                    </dt>
+                    <dd>
+                        <a href="/theory and shouye/theory.html#kupu" target="_blank">概念</a>
+                    </dd>
+                    <dd>
+                        <a href="/theory and shouye/theory.html#influence" target="_blank">影响</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/new/newall.html" target="_blank">新闻</a>
+                    </dt>
+                    <dd>
+                        <a href="/new/video alone/video.html" target="_blank">视频</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/new alone/text.html" target="_blank">文章</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/yiyang/law alone/laws.html" target="_blank">环保法规</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/yiyang/standard.html" target="_blank">质量标准</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/social alone/social.html" target="_blank">国际组织</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/social alone/social-ch.html" target="_blank">国内组织</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/tips/tips.html" target="_blank">低碳通</a>
+                    </dt>
+                    <dd>
+                        <a href="/tips/detail/greentravel/green.html" target="_blank">绿色出行</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/rubbish/rubbish.html" target="_blank">垃圾分类</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/salvage/salvage.html" target="_blank">废物利用</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/treeplant/plant.html" target="_blank">植树</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/community/community.html" target="_blank">活动</a>
+                    </dt>
+                    <dd>
+                        <a href="/community/community.html#calendar" target="_blank">日历</a>
+                    </dd>
+                    <dd>
+                        <a href="/community/answer.html" target="_blank">答题</a>
+                    </dd>
+                    <dd>
+                        <a href="/community/carbonjs.html" target="_blank">碳足迹计算</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/message/message.html" target="_blank">留言</a>
+                    </dt>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/team/team.html" target="_blank">关于我们</a>
+                    </dt>
+                </dl>
+            </div>
+
+            <div class="connect">
+                <a href="/team/t4.html" target="_blank"><span class="iconfont icon-news-filling"></span></a>
+                <a href="/team/t4.html" target="_blank"> <span class="span-txt">联系我们</span></a>
+            </div>
+            <div class="banquan">
+                因网络信息传播需要，本网使用的部分作品是从百度百科、新闻网、人民网搜索、转载的，或从第三方或免费资源提供方转载、摘编获得，在授权方面难免出现遗漏。如您对本网相关内容的版权问题存有异议，请您及时与我们联系，并提供您对相关内容拥有著作权的证明文件，我们将及时妥善处理。
+            </div>
+            <div class="name-banquan">
+                © 2024 环保网站 版权所有
+            </div>
+        </div>
+    </footer>
+    <a href="#" id="joinbutton" class="join_button">
+        加入我们
+    </a>
+    <div class="back_button"><a href="#top" class="iconfont icon-arrowTop"></a></div>
+    <script>
+        document.getElementById('toggleBox').addEventListener('click', function (event) {
+            event.preventDefault(); // 防止链接跳转
+            var overlay = document.getElementById('overlay');
+            if (overlay.style.display === 'none' || overlay.style.display === '') {
+                overlay.style.display = 'block';
+                overlay.classList.add('show'); // 添加CSS类以应用样式
+            } else {
+                overlay.style.display = 'none';
+                overlay.classList.remove('show'); // 移除CSS类以隐藏盒子
+            }
+        });
+
+        // 关闭盒子的函数
+        function closePopup() {
+            var overlay = document.getElementById('overlay');
+            overlay.style.display = 'none';
+            overlay.classList.remove('show');
+        }
+    </script>
+    <script>
+        document.getElementById('joinbutton').addEventListener('click', function (event) {
+            event.preventDefault(); // 防止链接跳转
+            var overlay = document.getElementById('overlay');
+            if (overlay.style.display === 'none' || overlay.style.display === '') {
+                overlay.style.display = 'block';
+                overlay.classList.add('show'); // 添加CSS类以应用样式
+            } else {
+                overlay.style.display = 'none';
+                overlay.classList.remove('show'); // 移除CSS类以隐藏盒子
+            }
+        });
+
+        // 关闭盒子的函数
+        function closePopup() {
+            var overlay = document.getElementById('overlay');
+            overlay.style.display = 'none';
+            overlay.classList.remove('show');
+        }
+    </script>
+
+    <script src="./homepage.js"></script>
+</body>
+
+</html>

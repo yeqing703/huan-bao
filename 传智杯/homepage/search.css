@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #2c83eb;
+    --secondary-color: #4CAF50;
+    --bg-color: #f8f9fa;
+    --text-dark: #2d3436;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg-color);
+    line-height: 30px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.searchbody {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.page-title::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #5da64a;
+    border-radius: 2px;
+}
+
+/* 搜索框区域 */
+.search-box-container {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    position: relative;
+    margin-top: 20px;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 5px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(44, 131, 235, 0.2);
+}
+
+.search-btn {
+    background: #5da64a;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(44, 131, 235, 0.3);
+}
+
+.results {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #2d3436;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+a:hover{
+    color: #5da64a;
+    background: #f8fafd;
+}
+
+ul{
+    line-height: 50px;
+}

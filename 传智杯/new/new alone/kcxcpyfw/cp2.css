@@ -1,0 +1,99 @@
+:root {
+    --lh: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 18px;
+    text-indent: 2em;
+}
+
+
+p {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+p::selection {
+    background-color: #f40;
+    color: #fff;
+}
+
+
+.iconfont {
+    color: #f40;
+    font-size: 20px;
+}
+
+img{
+    display: flex;
+    margin: auto;
+    height: 600px;
+    width: 1200px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.image{
+    text-align: center;
+    object-fit: cover;
+
+}
+/* init end */
+/* custom */
+.news {
+    width: 100%;
+    max-width: 1200px;
+    line-height: var(--lh);
+    /* block center */
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 10px;
+}
+
+.header {
+    column-span: all;
+    text-align: center;
+    margin-bottom: var(--lh);
+    /* overflow: hidden; */
+}
+
+.title {
+    margin-bottom: var(--lh);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.abstract {
+    text-indent: 2em;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.chap {
+    margin-top: var(--lh);
+    margin-bottom: var(--lh);
+}
+
+.sect {
+    margin-top: var(--lh);
+    margin-bottom: var(--lh);
+}
+
+.footer {
+    text-align: right;
+    color: rgb(86, 86, 86);
+}
+.footer a{
+    color: #f40;
+}

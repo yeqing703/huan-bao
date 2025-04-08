@@ -1,0 +1,206 @@
+:root {
+  --line-height: 30px;
+  --main-color: #468f57;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box_header {
+  width: 300px;
+  height: 80px;
+  background-color: #468f57;
+  border-radius: 50px;
+  /* box-shadow: 10px 7px 1px rgb(36, 107, 36); */
+  /* z-index: 99;
+  position: sticky;
+  top: 0; */
+  display: flex;
+  align-items: center;
+}
+
+.box_header h1 {
+  /* margin: auto 0; */
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.box_content {
+  width: 100vh;
+  height: 800px;
+  /* display: flex; */
+  /* margin: 0 auto; */
+  /* background-color: rgba(0, 0, 0, 0.26); */
+  border: 3px solid rgb(170, 170, 170);
+  border-radius: 50px;
+  box-shadow: 5px 5px 2px #969696;
+  margin-top: 20px;
+}
+
+.question {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  display: none;
+  /* Hide all questions initially */
+}
+
+.question.active {
+  display: block;
+  /* Show the active question */
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.content h2 {
+  text-align: center;
+  color: #194423;
+  font-size: 25px;
+  padding-top: 30px;
+}
+
+.anniu {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+label {
+  width: 40%;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  background: #6fb58c;
+  padding: 10px 0;
+}
+
+label:hover {
+  background: #8cb195;
+}
+
+.content button {
+  height: 70px;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 100px;
+  border: transparent;
+  font-size: 20px;
+  box-shadow: 5px 5px 2px #969696;
+}
+
+button:hover {
+  background: #d4d4d4;
+}
+
+.content p {
+  text-align: center;
+}
+
+.end button {
+  width: 200px;
+  height: 35px;
+  font-size: 16px;
+  /* background: transparent; */
+  border: transparent;
+  box-shadow: 5px 5px 2px #969696;
+  border-radius: 100px;
+  /* padding-top: 10px; */
+}
+
+/*版权信息*/
+.footer {
+  color: #fff;
+  box-sizing: border-box;
+  background: #242825;
+  max-width: 1900px;
+  width: 100%;
+  margin-top: 150px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--main-color);
+  transition: color 0.3s;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 50px;
+  margin: auto;
+  max-width: 1224px;
+  text-align: center;
+}
+
+dt {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+dd {
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect .iconfont {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.span-txt {
+  font-size: 20px;
+}
+
+.banquan {
+  max-width: 1224px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 20px;
+  line-height: var(--line-height);
+  font-size: 16px;
+  border-top: 1px solid #838383;
+  border-bottom: 1px solid #838383;
+  color: #838383;
+  text-indent: 2em;
+  text-align: left;
+}
+
+.name-banquan {
+  max-width: 1224px;
+  margin: auto;
+  padding-bottom: 30px;
+  color: #838383;
+  text-align: center;
+  font-size: 16px;
+}

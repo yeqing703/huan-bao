@@ -1,0 +1,703 @@
+:root {
+  --line-height: 30px;
+}
+
+.nav-box {
+  position: sticky;
+  top: 0px;
+  height: 30px;
+  background-image: linear-gradient(#8cd1bb, #089);
+  z-index: 99;
+}
+
+header {
+  color: #468f57;
+  background: #468f57;
+  text-align: center;
+  max-height: 20vh;
+}
+
+nav {
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+
+}
+
+nav ul {
+
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-left: 200px;
+
+}
+
+nav ul li {
+  margin: 0 18px;
+
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* 首页页面 */
+/*header {
+  height: 15vh;
+  background-color: #468f57;
+  position: relative;
+  line-height: 10vh;
+  background-color: var(--color);
+  padding-left: calc(10vh/ 2);
+
+  animation: rotIcon;
+  animation-timeline: view();
+}
+
+.title-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 10vh;
+  aspect-ratio: 1;
+  background-color: var(--color); 
+  overflow: hidden;
+}
+
+.title-bar::before {
+  content: attr(data-title);
+  position: absolute;
+  width: 150%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #f1f2f3;
+  text-transform: capitalize;
+  background-color: #5da64a;
+  transform: rotate(-45deg) translateY(-15px);
+}
+
+.title-bar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  box-shadow: calc(10vh - 10px) calc(10px - 10vh) #333;
+  z-index: -1;
+}*/
+
+/* 标签 */
+
+.iconfont:hover {
+  color: #468f57;
+}
+
+a {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+a:hover span {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.a1 {
+  color: #080808;
+  font-size: 15px;
+}
+
+.a1:hover {
+  color: #468f57;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+/* 科普 */
+/* 1.1概念 */
+/* 总概念 */
+/* 后方壁纸的尺寸 */
+.s {
+  display: flex;
+  color: #ffffff;
+  height: 150px;
+  background-image: url('/绿色.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  padding: 0%;
+}
+
+/* 可持续生活 文字 */
+.s2 {
+  text-indent: 2em;
+  padding: 10px 20px;
+}
+
+.image-wrapper {
+  width: 300px;
+  margin-right: 190px;
+  margin-left: 100px;
+  margin-bottom: 70px;
+  flex: 1;
+  text-align: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.1);
+  cursor: zoom-in;
+}
+
+/* 科普标题 */
+.top2 {
+  column-span: all;
+  text-align: center;
+  margin-top: var(--line-h);
+  margin-bottom: var(--line-h);
+}
+
+/*h6 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 20px;
+}*/
+
+.abstract {
+  column-span: all;
+  text-align: justify;
+  margin-bottom: var(--line-h);
+}
+
+.abstract span {
+  font-weight: 600;
+  margin-right: 1em;
+  text-transform: capitalize;
+}
+
+.abstract span::before {
+  content: '[';
+}
+
+.abstract span::after {
+  content: ']';
+}
+
+/* 文字下沉 */
+.article {
+  --line-h: 30px;
+  --main-color: #5da64a;
+  columns: 3 350px;
+  padding: 10px;
+  counter-reset: chap;
+  line-height: var(--line-h);
+  background-color: #f2f2f2;
+  margin-bottom: 50px;
+}
+
+.article .header {
+  column-span: all;
+  text-align: center;
+  /* margin-top: var(--line-h); */
+  margin-bottom: var(--line-h);
+}
+
+.article p {
+  text-indent: 2em;
+  text-align: justify;
+  margin-bottom: var(--line-h);
+}
+
+.article h3+p {
+  text-indent: 0;
+}
+
+.article h3+p::first-letter {
+  float: left;
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-right: var(--line-h);
+  line-height: calc(2*var(--line-h));
+  color: var(--main-color);
+}
+
+/* 计数 */
+
+.article h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  counter-reset: img;
+  counter-reset: tbl;
+  counter-increment: sec;
+}
+
+.article h3::before {
+  content: counter(sec)'.';
+}
+
+.article h3~figure figcaption {
+  counter-increment: img;
+}
+
+.article h3~figure figcaption::before {
+  content: '图' counter(sec);
+}
+
+
+/* 图片 */
+figure {
+  margin-bottom: var(--line-h);
+
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: calc(8*var(--line-h));
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+figure figcaption {
+  margin: 0;
+  text-align: center;
+  line-height: var(--line-h);
+  color: #666;
+  font-size: 1.4rem;
+}
+
+/* 斑马表格 */
+table {
+  margin: 0 0 calc(2*var(--line-h)) 0;
+  background-image: url(../../imgs/logo1.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: right 20px bottom 20px;
+}
+
+table caption {
+  font-size: 1.4rem;
+}
+
+thead th {
+  background-color: #fff;
+  color: #468f57;
+  text-transform: capitalize;
+  font-weight: 600;
+  background-color: #bddac7;
+  text-align: left;
+}
+
+
+tbody tr:nth-child(odd) td {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #468f57;
+}
+
+tbody tr:hover td {
+  background-color: #bddac7;
+}
+
+tfoot td {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* 影响 */
+
+.top-banner {
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  padding: 100px;
+  background-color: #f2f2f2;
+  margin-bottom:100px;
+}
+
+.wrap.clear {
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  height: 400px;
+}
+
+a {
+  font: inherit;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-iitem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100px;
+  height: 100%;
+  background-color: #5da64a;
+  padding: 1rem;
+}
+
+.a1 :hover {
+  color: #bddac7;
+}
+
+.p1 {
+  writing-mode: vertical-rl;
+  font-size: 2rem;
+  margin: auto;
+}
+
+
+.nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 200px;
+  height: 100%;
+  background-color: var(--color);
+  padding: 1rem;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color);
+  transform: rotate(45deg);
+}
+
+.nav-item span,
+.cont p {
+  writing-mode: vertical-rl;
+  font-size: 16px;
+}
+
+.cont {
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.cont p {
+  width: 200px;
+  height: 100%;
+  padding: 1rem;
+  text-indent: 2em;
+  letter-spacing: 4px;
+  text-align: justify;
+  line-height: 2;
+}
+
+
+/* .cont:target {
+  width: 300px;
+} */
+
+.a-title {
+  color: rgb(10, 10, 10);
+  font-size: 25px;
+  line-height: 50px;
+  margin: 60px;
+  text-align: center;
+
+}
+
+.article-title {
+  color: rgb(255, 255, 255);
+  background-color: #5da64a;
+  font-size: 25px;
+  line-height: 80px;
+  margin: 40px;
+  text-align: center;
+}
+
+.sz {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 90px;
+}
+
+/* 日历 */
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 封面 */
+.cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #ccc;
+  box-shadow: var(--box-shadow);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  transform-origin: right;
+}
+
+.cover-left {
+  z-index: -1;
+}
+
+.cover-right {
+  z-index: -1;
+}
+
+.sp {
+  margin-top: 60px;
+  font-style: italic;
+  text-indent: 2em;
+  font-size: 18px;
+  color: #000000;
+}
+
+.book {
+  position: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  perspective: 1000px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+}
+
+.book-page {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  padding: 2rem;
+  background-color: var(--main-color);
+  box-shadow: var(--box-shadow);
+  z-index: calc(10 - var(--zindex));
+}
+
+.turn {
+  transform: rotateY(180deg);
+}
+
+.page-left.end {
+  right: 0;
+}
+
+.page-right {
+  position: absolute;
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(0.645, 0.45, 0.35, 1);
+}
+
+.page-right.turn {
+  transform: rotateY(-180deg);
+}
+
+.page-front,
+.page-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f2f3;
+  padding: 1.5rem;
+}
+
+.page-front {
+  transform: rotateY(0deg) translateZ(1px);
+}
+
+.page-back {
+  transform: rotateY(180deg) translateZ(1px);
+}
+
+.number-page {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+
+.number-btn {
+  position: absolute;
+  bottom: 1rem;
+  cursor: pointer;
+}
+
+.page-back .number-btn {
+  left: 1rem;
+}
+
+.page-front .number-btn {
+  right: 1rem;
+}
+
+.page-left.end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--padding-marging);
+}
+
+.bx {
+  color: #ffffff;
+}
+
+.logo-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+.table2 {
+  width: 94%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin: auto;
+  table-layout: fixed;
+
+  border-top: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+  line-height: 3.7;
+}
+
+
+th {
+  border-bottom: 1px dotted var(--main-color);
+  text-align: left;
+}
+
+.typewriter {
+  text-align: center;
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: .1em solid orange;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    margin-right: 50%
+  }
+
+  to {
+    width: 61%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  10% {
+    border-color: rgb(0, 0, 0);
+  }
+}
+
+/* 回到顶部 */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  background-color: #27846f;
+  color: white;
+  padding: 10px 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.back-to-top:hover {
+  border-color: #f40;
+}

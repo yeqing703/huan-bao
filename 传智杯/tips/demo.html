@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    $(document).ready(function() { 
+  var data = {
+      table: 'datatable'
+  };
+  var chart = {
+      type: 'column',
+      // 添加colors数组
+      colors: ['#FF0000', '#00FF00', '#0000FF'] // 红色、绿色、蓝色
+  };
+  var title = {
+      text: '出行方式碳排放排行榜',
+  };      
+  var yAxis = {
+      allowDecimals: false,
+      title: {
+        text: '碳排放占比 (%)'
+      }
+  };
+  var tooltip = {
+      formatter: function () {
+        return '<b>' + this.series.name + '</b><br/>' +
+            this.point.y + '%';
+      }
+  };
+  var credits = {
+      enabled: false // 隐藏脚注
+  };  
+  
+  var json = {};   
+  json.chart = chart; 
+  json.title = title; 
+  json.data = data;
+  json.yAxis = yAxis;
+  json.credits = credits;  
+  json.tooltip = tooltip;  
+  $('#container').highcharts(json);
+});
+  </script>
+</body>
+</html>

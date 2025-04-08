@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环保智能问答</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .mainbody {
+            text-align: center;
+            max-width: 90%;
+            margin: auto;
+            margin-top: 100px;
+            width: 1440px;
+        }
+
+        .chat-box {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .question-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainbody">
+        <h1>环保智能问答</h1>
+        <div class="chat-box" id="chatBox"></div>
+        <input type="text" class="question-input" placeholder="请输入问题..." id="questionInput">
+        <button class="submit-btn" onclick="submitQuestion()">提交问题</button>
+    </div>
+
+
+    <script>
+        // 先定义 appendMessage 函数
+        function appendMessage(question, answer) {
+            const chatBox = document.getElementById('chatBox');
+            const html = `
+                <div style="margin-bottom: 10px;">
+                    <div style="color: #666;">问：${question}</div>
+                    <div style="color: #2c83eb; padding-left: 10px;">答：${answer}</div>
+                </div>
+            `;
+            chatBox.innerHTML += html;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        // 再定义 submitQuestion 函数
+        async function submitQuestion() {
+            const input = document.getElementById('questionInput');
+            const question = input.value.trim();
+            if (!question) return;
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question })
+                });
+
+                const data = await response.json();
+                if (data.answer) {
+                    appendMessage(question, data.answer);
+                    input.value = '';
+                } else {
+                    alert(data.error || "未知错误");
+                }
+            } catch (error) {
+                console.error('请求失败:', error);
+            }
+        }
+    </script>
+</body>
+
+</html>

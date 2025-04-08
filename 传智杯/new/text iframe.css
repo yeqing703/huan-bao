@@ -1,0 +1,35 @@
+:root {
+    --line-height: 30px;
+}
+
+.news {
+    grid-area: news;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.txt {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.title {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+}
+
+.news-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #0d2d43;
+    margin-bottom: 35px;
+    line-height: var(--line-height);
+}
+
+.news-item::before {
+    content: '· ';
+}

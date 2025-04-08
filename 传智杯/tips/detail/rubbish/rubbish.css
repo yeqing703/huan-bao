@@ -1,0 +1,181 @@
+:root {
+    /* tips主题颜色 */
+    --main-color: #468f57;
+    --line-height: 30px;
+    --s-txt-color:#71777d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-image:-webkit-linear-gradient(0deg, var(--main-color),#6fb58c) ; */
+    background: url(./windrader-474576_1280.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.box_body {
+    width: 90%;
+    height: 2400px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+/* 内容 */
+li{
+    color: var(--s-txt-color);
+}
+h2,h3{
+    color: #2a2a2b;
+}
+.title {
+    text-align: center;
+    font-size: 5ch;
+    line-height: 2.5;
+}
+
+.content {
+    width: 100%;
+    height: 450px;
+    background-image: -webkit-linear-gradient(0deg, rgba(206, 245, 208, 0.466), #f1e2cb8a);
+    display: flex;
+}
+
+.box01 {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.box02 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.box01 h2 {
+    font-size: 2.5ch;
+    display: flex;
+}
+
+.box01 li {
+    font-size: 18px;
+    line-height: var(--line-height);
+    display: flex;
+}
+
+.box02 img {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+/*返回*/
+.back_button {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    bottom: 25px;
+    right: 25px;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 15%;
+    text-align: center;
+    background-color: var(--main-color);
+    /* box-shadow: 10px 10px 5px #888888; */
+}
+
+.back_button:hover {
+    background-color: #bddac7;
+}
+
+.back_button a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*版权信息*/
+.footer {
+    color: #fff;
+    box-sizing: border-box;
+    background: #242825;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--main-color);
+    transition: color 0.3s;
+    border: none;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 50px;
+    margin: auto;
+    max-width: 1224px;
+    text-align: center;
+}
+
+dt {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+dd {
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect .iconfont {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.span-txt {
+    font-size: 20px;
+}
+
+.banquan {
+    max-width: 1224px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    line-height: var(--line-height);
+    font-size: 16px;
+    border-top: 1px solid #838383;
+    border-bottom: 1px solid #838383;
+    color: #838383;
+    text-indent: 2em;
+    text-align: left;
+}
+
+.name-banquan {
+    max-width: 1224px;
+    margin: auto;
+    padding-bottom: 30px;
+    color: #838383;
+    text-align: center;
+    font-size: 16px;
+}

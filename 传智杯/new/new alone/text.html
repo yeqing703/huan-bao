@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章</title>
+    <link rel="stylesheet" href="./text.css">
+    <link rel="stylesheet" href="/iconfont/iconfont one/iconfont one/iconfont.css">
+</head>
+
+<body>
+    <section class="banner">
+        <div class="banner-item" style="--i:0"></div>
+        <div class="banner-item" style="--i:1"></div>
+        <div class="banner-item" style="--i:2"></div>
+        <div class="banner-item" style="--i:3"></div>
+        <div class="banner-item" style="--i:4"></div>
+    </section>
+    <!--文章-->
+    <div class="wrapA">
+        <div class="top">
+            <div class="box">
+                <div class="title-box">
+                    <div class="title-big">文章</div>
+                    <div class="title">
+                        <button onclick="btn()">环境新闻</button>
+                    </div>
+                    <div class="title">
+                        <button onclick="btnproduct()">环保政策与行动</button>
+                    </div>
+                    <div class="title">
+                        <button onclick="btnview()">可持续产品与服务</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="iframe-container">
+                <!-- 内联框架 -->
+                <iframe id="iframe" src="./hjnews.html" frameborder="0"></iframe>
+            </div>
+            <script>
+                function btn() {
+                    document.getElementById('iframe').src = "hjnews.html";
+                }
+                function btnproduct() {
+                    document.getElementById('iframe').src = "zcnews.html";
+                }
+                function btnview() {
+                    document.getElementById('iframe').src = "cpnews.html";
+                }
+            </script>
+        </div>
+        <!--<div class="page">
+            <ul class="page-box">
+                <li class="iconfont icon-icon_zuo"></li>
+                <li class="page-item">
+                    <a href="#nav-video-one" title="1" class="cur">1</a>
+                </li>
+                <li class="page-item">
+                    <a href="#nav-video-two" onclick="getpage($(this));return false;">2</a>
+                </li>
+                <li class="page-item">
+                    <a href="#nav-video-three" onclick="getpage($(this));return false;">3</a>
+                </li>
+                <li class="page-item">
+                    ...
+                </li>
+                <li class="iconfont icon-dibudaohanglan-"></li>
+            </ul>
+        </div>-->
+        <div class="search">
+            <style>
+                .icon-a {
+                    width: 80px;
+                    height: 80px;
+                    vertical-align: -0.15em;
+                    fill: currentColor;
+                    overflow: hidden;
+                }
+            </style>
+            <script src="./font_4709138_zvulj9wvx7/iconfont.js"></script>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const bannerItems = document.querySelectorAll('.banner-item');
+
+                bannerItems.forEach(item => {
+                    item.addEventListener('mouseenter', function () {
+                        // 将所有其他项的背景变为灰色
+                        bannerItems.forEach(banner => {
+                            if (banner !== item) {
+                                banner.classList.add('gray-bg');
+                            }
+                        });
+                        // 移除当前项的灰色背景
+                        this.classList.remove('gray-bg');
+                        // 放大当前项
+                        this.style.transform = 'scale(1.05)';
+                    });
+
+                    item.addEventListener('mouseleave', function () {
+                        // 移除所有项的灰色背景
+                        bannerItems.forEach(banner => {
+                            banner.classList.remove('gray-bg');
+                        });
+                        // 恢复当前项的大小
+                        this.style.transform = 'scale(1)';
+                    });
+                });
+            });
+        </script>
+    </div>
+    <div class="back_button"><a href="#top" class="iconfont icon-arrowTop"></a></div>
+    <footer>
+        <div class="footer">
+            <div class="list">
+                <dl>
+                    <dt>
+                        <a href="/theory and shouye/theory.html" target="_blank">科普</a>
+                    </dt>
+                    <dd>
+                        <a href="/theory and shouye/theory.html#kupu" target="_blank">概念</a>
+                    </dd>
+                    <dd>
+                        <a href="/theory and shouye/theory.html#influence" target="_blank">影响</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/new/newall.html" target="_blank">新闻</a>
+                    </dt>
+                    <dd>
+                        <a href="/new/video alone/video.html" target="_blank">视频</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/new alone/text.html" target="_blank">文章</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/yiyang/law alone/laws.html" target="_blank">环保法规</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/yiyang/standard.html" target="_blank">质量标准</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/social alone/social.html" target="_blank">国际组织</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/social alone/social-ch.html" target="_blank">国内组织</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/tips/tips.html" target="_blank">低碳通</a>
+                    </dt>
+                    <dd>
+                        <a href="/tips/detail/greentravel/green.html" target="_blank">绿色出行</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/rubbish/rubbish.html" target="_blank">垃圾分类</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/salvage/salvage.html" target="_blank">废物利用</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/treeplant/plant.html" target="_blank">植树</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/community/community.html" target="_blank">活动</a>
+                    </dt>
+                    <dd>
+                        <a href="/community/community.html#calendar" target="_blank">日历</a>
+                    </dd>
+                    <dd>
+                        <a href="/community/answer.html" target="_blank">答题</a>
+                    </dd>
+                    <dd>
+                        <a href="/community/carbonjs.html" target="_blank">碳足迹计算</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/message/message.html" target="_blank">留言</a>
+                    </dt>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/team/team.html" target="_blank">关于我们</a>
+                    </dt>
+                </dl>
+            </div>
+
+            <div class="connect">
+                <a href="/team/t4.html" target="_blank"><span class="iconfont icon-news-filling"></span></a>
+                <a href="/team/t4.html" target="_blank"> <span class="span-txt">联系我们</span></a>
+            </div>
+            <div class="banquan">
+                因网络信息传播需要，本网使用的部分作品是从百度百科、新闻网、人民网搜索、转载的，或从第三方或免费资源提供方转载、摘编获得，在授权方面难免出现遗漏。如您对本网相关内容的版权问题存有异议，请您及时与我们联系，并提供您对相关内容拥有著作权的证明文件，我们将及时妥善处理。
+            </div>
+            <div class="name-banquan">
+                © 2024 环保网站 版权所有
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

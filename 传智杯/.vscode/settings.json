@@ -1,0 +1,8 @@
+{
+    "terminal.integrated.profiles.windows": {
+      "Git Bash": {
+        "path": "C:\\Autodesk\\Git\\git-bash.exe"
+      }
+    },
+    "terminal.integrated.defaultProfile.windows": "Git Bash"
+}

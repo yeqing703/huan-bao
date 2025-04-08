@@ -1,0 +1,41 @@
+.table {
+    margin-left: 100px;
+    width: 400px;
+    border-bottom: 1px solid black;
+    border-spacing: 20px;
+}
+
+.table td {
+    width: 100px;
+    background-color: #fff;
+}
+
+.img{
+    width: 250px;
+    height: 180px;
+    overflow: hidden;
+}
+
+img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    /* 平滑过渡效果 */
+}
+
+img:hover {
+    transform: scale(1.2);
+    /* 放大20% */
+}
+
+.title {
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: left;
+
+}
+.title:hover{
+    color: #468f57;
+}

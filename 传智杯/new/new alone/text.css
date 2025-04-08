@@ -1,0 +1,277 @@
+:root {
+    --main-color: #468f57;
+    --txt-color: #333;
+    --i: 0;
+    --line-height: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapA {
+    margin: auto;
+    width: 1440px;
+    max-width: 90%;
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.banner-item {
+    height: 25rem;
+    background-image: url(/picture/14.jpg);
+    background-position: calc((var(--i))*25%)0%;
+    background-size: 500% 100%;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+
+}
+
+.banner-item :hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.gray-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明灰色覆盖层 */
+}
+
+.top {
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.title-box {
+    display: flex;
+
+}
+
+.title-big {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    line-height: 90px;
+    color: #468f57;
+}
+
+.title {
+    line-height: 90px;
+    width: 25%;
+    text-align: center;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+}
+
+.title button {
+    margin-top: 0;
+    border: none;
+    background-size: 200%;
+    background: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: 0.4s;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.title button:hover {
+    line-height: 90px;
+    border-bottom: 4px solid #468f57
+}
+
+.iframe-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#iframe {
+    width: 100%;
+    height: 2000px;
+    border: none;
+}
+
+#iframe-A {
+    width: 100%;
+    border: none;
+}
+
+
+/*.page {
+    width: 100%;
+    text-align: center;
+}
+
+.page-box {
+    display: inline-block;
+    vertical-align: top;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+li {
+    float: left;
+    text-align: center;
+    font-size: 5px;
+    font-weight: bold;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+.page-box .page-item {
+    float: left;
+    margin: 0 6px;
+    min-width: 30px;
+    font-family: 'xfont', Arial;
+    font-size: 16px;
+    line-height: 1.875;
+}
+
+.page .page-item>a:hover,
+.page .page-item>a.cur {
+    background-color: #9a2929;
+    color: #fff !important;
+}
+
+.page .page-item>a {
+    display: block;
+    padding: 0 5px;
+    border-radius: 999px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}*/
+.search {
+    border-radius: 50%;
+    border: 1px solid #468f57;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+/*返回*/
+.back_button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 25px;
+    right: 25px;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 15%;
+    text-align: center;
+    background-color: var(--main-color);
+    /* box-shadow: 10px 10px 5px #888888; */
+}
+
+.back_button:hover {
+    background-color: #bddac7;
+}
+
+.back_button a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*版权信息*/
+.footer {
+    color: #fff;
+    box-sizing: border-box;
+    background: #242825;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--main-color);
+    transition: color 0.3s;
+    border: none;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 50px;
+    margin: auto;
+    max-width: 1224px;
+    text-align: center;
+}
+
+dt {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+dd {
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect .iconfont {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.span-txt {
+    font-size: 20px;
+}
+
+.banquan {
+    max-width: 1224px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    line-height: var(--line-height);
+    font-size: 16px;
+    border-top: 1px solid #838383;
+    border-bottom: 1px solid #838383;
+    color: #838383;
+    text-indent: 2em;
+    text-align: left;
+}
+
+.name-banquan {
+    max-width: 1224px;
+    margin: auto;
+    padding-bottom: 30px;
+    color: #838383;
+    text-align: center;
+    font-size: 16px;
+}

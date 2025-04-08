@@ -1,0 +1,54 @@
+CREATE DATABASE eco_website;
+USE eco_website;
+
+GRANT ALL PRIVILEGES ON eco_website.* TO 'root'@'localhost' IDENTIFIED BY '12345678Yq';
+FLUSH PRIVILEGES;
+
+
+#创建留言表
+CREATE TABLE message (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    ename VARCHAR(100) NOT NULL,
+    content TEXT NOT NULL,
+    avatar VARCHAR(255) DEFAULT '/img/avatar0.png', #默认头像
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)ENGINE=INNODB DEFAULT CHARSET=utf8mb4
+
+SHOW TABLES;
+
+SELECT * FROM message;
+
+DESC message;
+
+ALTER TABLE message ADD COLUMN created_at DATETIME DEFAULT CURRENT_TIMESTAMP;
+
+DROP TABLE message
+
+SHOW VARIABLES LIKE 'character_set_database';
+SHOW VARIABLES LIKE 'character_set_server';
+
+ALTER DATABASE eco_website CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE message CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+#创建意见表
+CREATE TABLE contact_messages (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4;
+
+SELECT * FROM contact_messages;
+
+#创建报名表
+CREATE TABLE signup (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+		username VARCHAR(100) NOT NULL,#最长 100 字符
+    email VARCHAR(255) NOT NULL,
+    address TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4;
+
+SELECT * FROM signup;
+
+DROP TABLE contact_messages

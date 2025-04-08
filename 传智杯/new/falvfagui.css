@@ -1,0 +1,47 @@
+:root {
+    --line-height: 30px;
+    --s-txt-color:#64696e;
+}
+p{
+    color: var(--s-txt-color);
+}
+a {
+    display: block;
+    float: right;
+    color: var(--s-txt-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #468f57;
+}
+
+.grid {
+    display: grid;
+    height: 560px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-color: #f3f4f5;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: 2em;
+    text-align: justify;
+    width: 750px;
+}
+
+.item {
+    color: #000;
+    border-bottom: 1px solid #0d0d0d;
+    margin: 70px;
+    line-height: var(--line-height);
+}
+
+.shield {
+    float: left;
+}
+
+.table-threeA p {
+    text-indent: 2em;
+}

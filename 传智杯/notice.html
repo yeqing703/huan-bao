@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注意事项</title>
+  <style>
+     @import url(/css/fonts_Quicksand.css);
+
+body,
+div,
+h2,
+p,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Quicksand, "微软雅黑", "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+@property --deg-r {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+body {
+  --deg-r: 0deg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(var(--deg-r), #5dbe61, #2196F3, #dabd66, #5ce69a);
+  animation: roll 10s linear infinite;
+}
+
+@keyframes roll {
+  to {
+    --deg-r: 360deg;
+  }
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+  max-width: 800px;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.tips {
+  height: 300px;
+  text-align: justify;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.tips::-webkit-scrollbar {
+  width: 10px;
+}
+
+.tips::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.tips::-webkit-scrollbar-thumb {
+  background-color: #f1c40f;
+}
+
+
+.tips p {
+  margin-bottom: 1em;
+  line-height: 1.5rem;
+}
+
+.btn {
+  display: block;
+  border: none;
+  outline: none;
+  color: #666;
+  background-color: #ddd;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn.active {
+  background-color: #f1c40f;
+  cursor: pointer;
+  color: #fff;
+  pointer-events: all;
+}
+  </style>
+</head>
+
+<body>
+  <div class="notice">
+    <h2>通知</h2>
+    <div class="tips">
+     <p>亲爱的人类伙伴们：</p>
+      <p>在这个时代，我们共同面对着环境与发展的双重挑战。习近平总书记曾深刻指出：“绿水青山就是金山银山”
+，这一理念深刻揭示了生态环境与经济发展的内在联系，强调了保护环境的重要性。它不仅是对自然之美的赞美，更是对未来可持续发展的深刻洞察。。</p>
+      <p>我们深知，可持续生活不仅是对环境的尊重，也是对未来的一份承诺。它关乎我们每一个人的生活质量，关乎我们子孙后代的生存环境。
+        在这一理念的指引下，我们呼吁每一位社区居民，以实际行动响应总书记的号召，共同参与到可持续生活的实践中来。</p>
+        <p>让我们携手同行，从我做起，从现在做起，共同为实现人与自然和谐共生的美丽家园而努力。我们相信，通过我们的共同努力，可以为地球的可持续发展贡献一份力量。</p>
+        <p>期待您的参与和支持，让我们携手共创美好未来！</p>
+      <p>--环保智库---</p>
+    </div>
+    <button class="btn">我已了解</button>
+  </div>
+  <script>
+    let tips = document.querySelector('.tips');
+    let btn = document.querySelector('.btn');
+    tips.addEventListener('scroll', () => {
+      let per = tips.scrollTop / (tips.scrollHeight - tips.offsetHeight);
+      if (per >= 0.9) {
+        btn.removeAttribute('disabled');
+        btn.classList.add('active');
+      }
+    })
+    btn.addEventListener('click', () => {
+        location.href = '/homepage/homepage.html'
+    })
+  </script>
+</body>
+
+</html>

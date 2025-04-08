@@ -1,0 +1,23 @@
+{
+  "id": "4737118",
+  "name": "di'qiu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1719347",
+      "name": "地球",
+      "font_class": "diqiu",
+      "unicode": "e7b9",
+      "unicode_decimal": 59321
+    },
+    {
+      "icon_id": "11372686",
+      "name": "日历",
+      "font_class": "rili",
+      "unicode": "e8b4",
+      "unicode_decimal": 59572
+    }
+  ]
+}

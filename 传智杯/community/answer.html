@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环保知识小问答</title>
+    <link rel="stylesheet" href="./answer.css">
+    <link rel="stylesheet" href="/iconfont/iconfont one/iconfont one/iconfont.css">
+    <style>
+        #result {
+            margin-top: 10px;
+        }
+
+        #end-screen {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box_body">
+        <div class="box_header">
+            <h1>环保知识小问答</h1>
+        </div>
+        <div class="box_content">
+            <!-- <p>粽子叶、扇贝壳属于有害垃圾</p>
+            <input type="radio" name="right" checked>对
+            <input type="radio" name="wrong">错 -->
+
+            <!-- test -->
+            <div id="question1" class="question active">
+                <div class="content">
+                    <h2>问题 1: 粽子叶、扇贝壳属于有害垃圾</h2>
+                    <div class="anniu">
+                        <label><input type="radio" name="q1" value="true">对</label>
+                        <label><input type="radio" name="q1" value="false">错</label>
+                    </div>
+                    <button onclick="checkAnswer(1)">提交</button>
+                    <p id="result1"></p>
+                </div>
+            </div>
+
+            <div id="question2" class="question active">
+                <div class="content">
+                    <h2>问题 2: 汽车尾气能够引起光化学烟雾</h2>
+                    <div class="anniu">
+                        <label><input type="radio" name="q2" value="true">对</label>
+                        <label><input type="radio" name="q2" value="false">错</label>
+                    </div>
+                    <button onclick="checkAnswer(2)">提交</button>
+                    <p id="result2"></p>
+                </div>
+            </div>
+
+            <div id="question3" class="question active">
+                <div class="content">
+                    <h2>问题 3: 植物吸收氧气产生二氧化碳等气体</h2>
+                    <div class="anniu">
+                        <label><input type="radio" name="q3" value="true">对</label>
+                        <label><input type="radio" name="q3" value="false">错</label>
+                    </div>
+                    <button onclick="checkAnswer(3)">提交</button>
+                    <p id="result3"></p>
+                </div>
+            </div>
+
+            <div id="question4" class="question active">
+                <div class="content">
+                    <h2>问题 4: 只有冬天有雾霾</h2>
+                    <div class="anniu">
+                        <label><input type="radio" name="q4" value="true">对</label>
+                        <label><input type="radio" name="q4" value="false">错</label>
+                    </div>
+                    <button onclick="checkAnswer(4)">提交</button>
+                    <p id="result4"></p>
+                </div>
+            </div>
+
+            <div id="question5" class="question active">
+                <div class="content">
+                    <h2>问题 5: 氧气不是温室气体</h2>
+                    <div class="anniu">
+                        <label><input type="radio" name="q5" value="true">对</label>
+                        <label><input type="radio" name="q5" value="false">错</label>
+                    </div>
+                    <button onclick="checkAnswer(5)">提交</button>
+                    <p id="result5"></p>
+                </div>
+            </div>
+
+
+            <!-- 结束界面 -->
+
+            <div id="end-screen" class="end">
+                <h2>答题完成!</h2>
+                <button onclick="restartQuiz()">返回第一题</button>
+            </div>
+
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="list">
+                <dl>
+                    <dt>
+                        <a href="/theory and shouye/theory.html" target="_blank">科普</a>
+                    </dt>
+                    <dd>
+                        <a href="/theory and shouye/theory.html#kupu" target="_blank">概念</a>
+                    </dd>
+                    <dd>
+                        <a href="/theory and shouye/theory.html#influence" target="_blank">影响</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/new/newall.html" target="_blank">新闻</a>
+                    </dt>
+                    <dd>
+                        <a href="/new/video alone/video.html" target="_blank">视频</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/new alone/text.html" target="_blank">文章</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/yiyang/law alone/laws.html" target="_blank">环保法规</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/yiyang/standard.html" target="_blank">质量标准</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/social alone/social.html" target="_blank">国际组织</a>
+                    </dd>
+                    <dd>
+                        <a href="/new/social alone/social-ch.html" target="_blank">国内组织</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/tips/tips.html" target="_blank">实践</a>
+                    </dt>
+                    <dd>
+                        <a href="/tips/detail/greentravel/green.html" target="_blank">绿色出行</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/rubbish/rubbish.html" target="_blank">垃圾分类</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/salvage/salvage.html" target="_blank">废物利用</a>
+                    </dd>
+                    <dd>
+                        <a href="/tips/detail/treeplant/plant.html" target="_blank">植树</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/community/community.html" target="_blank">活动</a>
+                    </dt>
+                    <dd>
+                        <a href="/community/community.html#calendar" target="_blank">日历</a>
+                    </dd>
+                    <dd>
+                        <a href="/community/answer.html" target="_blank">答题</a>
+                    </dd>
+                    <dd>
+                        <a href="/community/carbonjs.html" target="_blank">碳足迹计算</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/message/message.html" target="_blank">留言</a>
+                    </dt>
+                </dl>
+                <dl>
+                    <dt>
+                        <a href="/team/team.html" target="_blank">关于我们</a>
+                    </dt>
+                </dl>
+            </div>
+
+            <div class="connect">
+                <a href="/team/t4.html" target="_blank"><span class="iconfont icon-news-filling"></span></a>
+                <a href="/team/t4.html" target="_blank"> <span class="span-txt">联系我们</span></a>
+            </div>
+            <div class="banquan">
+                因网络信息传播需要，本网使用的部分作品是从百度百科、新闻网、人民网搜索、转载的，或从第三方或免费资源提供方转载、摘编获得，在授权方面难免出现遗漏。如您对本网相关内容的版权问题存有异议，请您及时与我们联系，并提供您对相关内容拥有著作权的证明文件，我们将及时妥善处理。
+            </div>
+            <div class="name-banquan">
+                © 2024 环保网站 版权所有
+            </div>
+        </div>
+    </footer>
+    <script>
+        const questions = [
+            { question: "粽子叶、扇贝壳属于有害垃圾", answer: "false", id: 1 },
+            { question: "汽车尾气能够引起光化学烟雾", answer: "true", id: 2 },
+            { question: "植物吸收氧气产生二氧化碳等气体", answer: "false", id: 3 },
+            { question: "只有冬天有雾霾", answer: "false", id: 4 },
+            { question: "氧气不是温室气体", answer: "true", id: 5 },
+            // Add more questions here
+        ];
+
+        let currentQuestion = 0;
+
+        function showQuestion(index) {
+            const allQuestions = document.querySelectorAll('.question');
+            allQuestions.forEach((question, i) => {
+                question.classList.remove('active');
+            });
+            const current = document.getElementById(`question${index + 1}`);
+            current.classList.add('active');
+        }
+
+        function checkAnswer(questionNumber) {
+            const question = questions[questionNumber - 1];
+            const answers = document.getElementsByName('q' + questionNumber);
+            const result = document.getElementById('result' + questionNumber);
+            let userAnswer = '';
+
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i].checked) {
+                    userAnswer = answers[i].value;
+                    break;
+                }
+            }
+
+            if (userAnswer === question.answer) {
+                result.innerHTML = "回答正确!";
+                result.style.color = "green";
+            } else {
+                result.innerHTML = "回答错误TT";
+                result.style.color = "red";
+            }
+
+            //转跳到下一题
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    showQuestion(currentQuestion);
+                } else {
+                    // End of quiz
+                    showEndScreen();
+                    // alert("答题结束!");
+                }
+            }, 1000);//设置一个1.5秒的延迟
+        }
+
+        function showEndScreen() {
+            const endScreen = document.getElementById('end-screen');
+            endScreen.style.display = 'block';
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            const endScreen = document.getElementById('end-screen');
+            endScreen.style.display = 'none';
+            showQuestion(currentQuestion);
+        }
+        // Initialize the quiz
+        showQuestion(currentQuestion);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* tips主题颜色 */
+    --main-color: #468f57;
+    --dot-w: 8px;
+    --border-w: 2px;
+    --p-m-g: 10px;
+    --line-height: 30px;
+    --s-txt-color: #71777d;
+}
+
+/* 日历图标 */
+@import url('https://at.alicdn.com/t/c/font_4731952_2lg6rzf19xo.css');
+
+/* 定义左右晃动的动画 */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+}
+
+/* 图标的基本样式 */
+.iconfont {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* 晃动的类 */
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.carousel img.img3 {
+    width: 30.33%;
+    height: 100%;
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+/*搜索*/
+#searchForm {
+    border-radius: 50px;
+    float: left;
+    margin: 5px auto;
+    display: flex;
+}
+
+.searchfrom {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+.seatext {
+    font-size: 14px;
+    width: 100%;
+}
+
+#searchInput {
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    /*去除默认轮廓效果*/
+}
+
+#searchForm button {
+    margin-right: 5px;
+    font-size: 20px;
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    border-color: #ffffff;
+    height: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.308);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.nav a {
+    color: white;
+    margin: 0 15px;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.nav a:hover {
+    color: #468f57;
+}
+
+.n1 {
+    margin-left: 50%;
+}
+
+.navA::before {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.navA:hover::before {
+    width: 100%;
+}
+
+.box-zw {
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/*日历*/
+.earth.calendar {
+    position: relative;
+    margin: auto;
+    width: 800px;
+    height: 600px;
+    padding: 2rem;
+}
+
+.img3 {
+    object-fit: cover;
+}
+
+.img1 {
+    width: 40px;
+    height: 40px;
+}
+
+
+.iconfont.icon-shijie {
+    color: #356c41;
+}
+
+.iconfont.icon-weibiaoti2 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.a2 {
+    color: #fff;
+    font-size: 16px;
+}
+
+.a2:hover {
+    color: #bddac7;
+}
+
+.a3:hover {
+    color: #000;
+}
+
+.together {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+.title-rl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sjz {
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+
+}
+
+.left {
+    padding: 20px;
+    padding-left: 40px;
+    margin: 20px;
+    width: 800px;
+    height: 200px;
+    background-color: #c5c5c566;
+    border: 1px solid #c5c5c566;
+    border-radius: 6px;
+    border-left: 6px solid #468f57;
+    box-shadow: 0 0 0 0 rgba(70, 143, 87, 0.7);
+    /* 平滑过渡效果 */
+    transition: box-shadow 0.5s ease;
+}
+
+.right {
+    padding: 20px;
+    padding-left: 40px;
+    margin: 20px;
+    width: 800px;
+    height: 200px;
+    background-color: #c5c5c566;
+    border: 1px solid #c5c5c566;
+    border-radius: 6px;
+    border-left: 6px solid #468f57;
+    box-shadow: 0 0 0 0 rgba(70, 143, 87, 0.7);
+    /* 平滑过渡效果 */
+    transition: box-shadow 0.5s ease;
+}
+
+.bottom {
+    padding: 20px;
+    padding-left: 40px;
+    margin: 20px;
+    width: 800px;
+    height: 200px;
+    background-color: #c5c5c566;
+    border: 1px solid #c5c5c566;
+    border-radius: 6px;
+    border-left: 6px solid #468f57;
+    box-shadow: 0 0 0 0 rgba(70, 143, 87, 0.7);
+    /* 平滑过渡效果 */
+    transition: box-shadow 0.5s ease;
+}
+
+.left:hover,
+.right:hover,
+.bottom:hover {
+    box-shadow: 2px 3px 5px rgba(70, 143, 87, 0.2);
+}
+
+.icon {
+    width: 100%;
+    line-height: var(--line-height);
+}
+
+.icon a {
+    display: flex;
+}
+
+.icon img {
+    width: 150px;
+    height: auto;
+    /* transition: filter 0.05s; */
+}
+
+.icon:hover img {
+    filter: grayscale(100%);
+    /* 将图片转换为灰度图像 */
+}
+
+.icon h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.877);
+    text-align: center;
+    display: flex;
+    margin-bottom: 10px;
+    padding-left: 100px;
+}
+
+.icon p {
+    font-size: 16px;
+    color: var(--s-txt-color);
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    padding-left: 100px;
+
+}
+
+.icon span {
+    color: var(--s-txt-color);
+    display: block;
+    float: right;
+}
+
+.icon a:hover span {
+    color: var(--main-color);
+    border: none;
+}
+
+/*返回*/
+.back_button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 25px;
+    right: 25px;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 15%;
+    text-align: center;
+    background-color: var(--main-color);
+    /* box-shadow: 10px 10px 5px #888888; */
+}
+
+.back_button:hover {
+    background-color: #bddac7;
+}
+
+.back_button a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*版权信息*/
+.footer {
+    margin-top: 200px;
+    color: #fff;
+    box-sizing: border-box;
+    background: #242825;
+    max-width: 1900px;
+    width: 100%;
+}
+
+.footer a:hover {
+    color: var(--main-color);
+    transition: color 0.3s;
+    border: none;
+}
+
+.footer a:hover span {
+    border: none;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 50px;
+    margin: auto;
+    max-width: 1224px;
+    text-align: center;
+}
+
+dt {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+dd {
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect .iconfont {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.span-txt {
+    font-size: 20px;
+}
+
+.banquan {
+    max-width: 1224px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    line-height: var(--line-height);
+    font-size: 16px;
+    border-top: 1px solid #838383;
+    border-bottom: 1px solid #838383;
+    color: #838383;
+    text-indent: 2em;
+    text-align: left;
+}
+
+.name-banquan {
+    max-width: 1224px;
+    margin: auto;
+    padding-bottom: 30px;
+    color: #838383;
+    text-align: center;
+    font-size: 16px;
+}
+
+/*.sjz {
+    position: relative;
+    margin: auto;
+}
+
+.float {
+    height: 300px;
+    padding: 4px 10px;
+    position: relative;
+    width: calc(50% + var(--border-w));
+}
+
+.float:nth-child(odd) {
+    float: left;
+    border-right: calc(2* var(--border-w)) solid var(--main-color);
+}
+
+.float:nth-child(even) {
+    float: right;
+    border-left: calc(2* var(--border-w)) solid var(--main-color);
+}
+
+.float:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--dot-w);
+    height: var(--dot-w);
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+}
+
+.float:nth-child(odd)::before {
+    right: -7px;
+}
+
+.float:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--dot-w);
+    height: var(--dot-w);
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+}
+
+.float:nth-child(even)::before {
+    left: -7px;
+}*/

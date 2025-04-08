@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>欢迎</title>
+  <style>
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      height: 100vh;
+      color: #fff;
+      background: #000 linear-gradient(to bottom, #5da64a, #468f57);
+    }
+
+    .desc {
+      width: 360px;
+    }
+
+    .desc span {
+      text-transform: capitalize;
+    }
+
+    .img {
+      float: left;
+      width: 240px;
+      shape-outside: url(../../imgs/running.png);
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 360px;
+      height: 10px;
+      background-color: #000;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .item {
+      width: 0;
+      height: 100%;
+      background-color: #fff;
+      animation: loading 5s steps(10) forwards;
+    }
+
+    .tips {
+      color: #ff0;
+    }
+
+    @keyframes loading {
+      100% {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="desc">
+    <img class="img" src="/img/welcome.png" alt="">
+    <span>Embrace,</span>
+    <span>green</span>
+    <span>living</span>
+    <span>to</span>
+    <span>protect </span>
+    <span>our planet</span>
+    <span>Reduce</span>
+    <span>recycle,</span>
+    <span>Reduce</span>
+    <span>more.</span>
+    <span>let's</span>
+    <span>create</span>
+    <span> a cleaner,</span>
+    <span>healthier world</span>
+    <span>for future generations.</span>
+  </div>
+  <span class="tips">Loading...</span>
+  <dd class="wrap">
+    <div class="item"></div>
+  </dd>
+  <script src="style.js "></script>
+  <script>
+    const item = document.querySelector('.item')
+    item.addEventListener('animationend', () => {
+      location.href = './notice.html'
+    })
+  </script>
+ 
+</body>
+
+</html>
